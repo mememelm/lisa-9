@@ -123,6 +123,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "LISA"
+    }
+  },
+  "defaultProject": "LISA",
+  "cli": {
+    "analytics": "c46f9840-9b9a-425e-9fc0-01e861ad0abe"
+  }
 }
