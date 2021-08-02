@@ -44,11 +44,11 @@ export class RegistrationComponent implements OnInit {
       password: this.userForm.value['password']
     }
     this.ctrl.api.post(Endpoints.SIGN_IN, body).subscribe((user: any) => {
-      if (user?.success == 'duplicate_email') {
-        this.ctrl.alert.warn("L'email utilisé existe déjà dans la base de données.")
-      } else {
+      if (user?.success == 'user_created') {
         this.ctrl.alert.success("Inscription réussie. Un courriel vous a été envoyé.")
         this.ctrl.router.navigate(['attente-validation'])
+      } else {
+        this.ctrl.alert.warn("L'email utilisé existe déjà dans la base de données.")
       }
     })
   }
