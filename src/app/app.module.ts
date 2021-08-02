@@ -22,6 +22,7 @@ import { LockedComponent } from './pages/locked/locked.component'
 import { NgxIntlTelInputModule } from 'ngx-intl-tel-input';
 import { PhoneInputComponent } from './components/phone-input/phone-input.component';
 import { ConnexionComponent } from './pages/connexion/connexion.component';
+import { PrivateSpaceComponent } from './pages/private-space/private-space.component';
 
 @NgModule({
   declarations: [
@@ -32,7 +33,8 @@ import { ConnexionComponent } from './pages/connexion/connexion.component';
     HeaderComponent,
     LockedComponent,
     PhoneInputComponent,
-    ConnexionComponent
+    ConnexionComponent,
+    PrivateSpaceComponent
   ],
   imports: [
     BrowserModule,
