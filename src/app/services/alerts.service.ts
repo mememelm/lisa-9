@@ -21,4 +21,20 @@ export class AlertsService {
   warn(message: string) {
     this.toastr.warning(message, this.title)
   }
+
+  actionError() {
+    this.toastr.error('Une erreur est survenue. Veuillez réessayer ultérieurement.')
+  }
+
+  actionSuccess() {
+    this.toastr.error('Enregistrement réussi.')
+  }
+
+  actionUpdate() {
+    this.toastr.error('Modification réussie.')
+  }
+
+  actionDelete() {
+    this.toastr.error('Suppression effectuée.')
+  }
 }

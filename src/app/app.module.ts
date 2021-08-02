@@ -14,12 +14,13 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations'
 
 import { ToastrModule } from 'ngx-toastr';
 import { BackButtonDisableModule } from 'angular-disable-browser-back-button';
+import { DataTablesModule } from 'angular-datatables';
+import { NgxIntlTelInputModule } from 'ngx-intl-tel-input';
+import { MatToolbarModule } from '@angular/material/toolbar'
 
-import { MatToolbarModule } from '@angular/material/toolbar';
 import { HeaderRegistrationComponent } from './components/shared/header-registration/header-registration.component';
 import { HeaderComponent } from './components/shared/header/header.component';
 import { LockedComponent } from './pages/locked/locked.component'
-import { NgxIntlTelInputModule } from 'ngx-intl-tel-input';
 import { PhoneInputComponent } from './components/phone-input/phone-input.component';
 import { ConnexionComponent } from './pages/connexion/connexion.component';
 import { PrivateSpaceComponent } from './pages/private-space/private-space.component';
@@ -58,7 +59,8 @@ import { UserRoleComponent } from './pages/admin/user-role/user-role.component';
     ReactiveFormsModule,
     ToastrModule.forRoot({ timeOut: 5000, positionClass: 'toast-bottom-right', preventDuplicates: true, closeButton: true }),
     BackButtonDisableModule.forRoot({ preserveScrollPosition: true }),
-    NgxIntlTelInputModule
+    NgxIntlTelInputModule,
+    DataTablesModule
   ],
   providers: [
     { provide: HTTP_INTERCEPTORS, useClass: EnvInterceptor, multi: true },

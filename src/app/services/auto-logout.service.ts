@@ -42,8 +42,7 @@ export class AutoLogoutService {
     const diff = timeLeft - dateNow
     const isTimeout = diff < 0
     if (isTimeout) {
-      this.ctrl.router.navigate([''])
-      localStorage.clear()
+      this.ctrl.logOut()
     }
   }
 

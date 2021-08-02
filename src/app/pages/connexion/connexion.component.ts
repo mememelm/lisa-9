@@ -43,13 +43,13 @@ export class ConnexionComponent implements OnInit {
     if (user?.res['account_state']) {
       const roleId = user?.res['hoomeRoleUserRoleID']
       localStorage.setItem('USER', JSON.stringify(user?.res))
-      roleId ? this.getRoleUser(roleId) : this.ctrl.router.navigate([this.ctrl.route.privateSpace])
+      roleId ? this.getUserRole(roleId) : this.ctrl.router.navigate([this.ctrl.route.privateSpace])
     } else {
       this.ctrl.router.navigate([this.ctrl.route.locked])
     }
   }
 
-  getRoleUser(roleId: number) {
+  getUserRole(roleId: number) {
     this.ctrl.api.get(Endpoints.ROLE_GET + roleId).subscribe((role: any) => {
       if (role?.data['label'] == 'Administrateur général' || role?.data['abbreviation'] == 'ADG') {
         this.ctrl.router.navigate([this.ctrl.route.adminUserRole])
