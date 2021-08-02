@@ -1,3 +1,4 @@
+import { ControllerService } from './../../../services/controller.service';
 import { Component, Input } from '@angular/core';
 
 @Component({
@@ -9,5 +10,7 @@ export class HeaderRegistrationComponent {
 
   @Input() displayConnexion = true
   @Input() displayRegistration = true
+
+  constructor(public ctrl: ControllerService) { }
 
 }

@@ -1,6 +1,6 @@
 <mat-toolbar>
   <a class="img-logo"><img src=""></a>
-  <a class="title" routerLink="/accueil">ACCUEIL</a>
-  <a class="title" routerLink="/connexion" *ngIf="displayConnexion">CONNEXION</a>
-  <a class="title" routerLink="/inscription" *ngIf="displayRegistration">INSCRIPTION</a>
+  <a class="title" [routerLink]="ctrl.route.home">ACCUEIL</a>
+  <a class="title" [routerLink]="ctrl.route.connexion" *ngIf="displayConnexion">CONNEXION</a>
+  <a class="title" [routerLink]="ctrl.route.registration" *ngIf="displayRegistration">INSCRIPTION</a>
 </mat-toolbar>

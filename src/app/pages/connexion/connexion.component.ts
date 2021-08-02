@@ -12,7 +12,7 @@ export class ConnexionComponent implements OnInit {
 
   userForm: FormGroup
 
-  constructor(private ctrl: ControllerService) { }
+  constructor(public ctrl: ControllerService) { }
 
   ngOnInit(): void {
     this.userForm = this.ctrl.fb.group({
@@ -41,16 +41,19 @@ export class ConnexionComponent implements OnInit {
 
   afterCheckConnexion(user: any) {
     if (user?.res['account_state']) {
+      const roleId = user?.res['hoomeRoleUserRoleID']
       localStorage.setItem('USER', JSON.stringify(user?.res))
-      this.ctrl.router.navigate(['espace-prive'])
+      roleId ? this.getRoleUser(roleId) : this.ctrl.router.navigate([this.ctrl.route.privateSpace])
     } else {
-      this.ctrl.router.navigate(['attente-validation'])
+      this.ctrl.router.navigate([this.ctrl.route.locked])
     }
   }
 
   getRoleUser(roleId: number) {
     this.ctrl.api.get(Endpoints.ROLE_GET + roleId).subscribe((role: any) => {
-
+      if (role?.data['label'] == 'Administrateur général' || role?.data['abbreviation'] == 'ADG') {
+        this.ctrl.router.navigate([this.ctrl.route.adminUserRole])
+      }
     })
   }
 

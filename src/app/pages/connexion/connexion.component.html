@@ -17,7 +17,7 @@
     </div>
     <div class="card-footer">
       <button class="btn btn-success" (click)="connexion()">VALIDER</button>
-      <button class="btn btn-success" routerLink="/inscription">
+      <button class="btn btn-success" [routerLink]="ctrl.route.registration">
         Créer un compte si c’est votre première connexion
       </button>
     </div>

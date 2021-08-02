@@ -10,7 +10,6 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { StoryComponent } from './pages/story/story.component';
 
-
 const routes: Routes = [
   { path: '', redirectTo: 'accueil', pathMatch: 'full' },
   { path: 'accueil', component: HomeComponent },
