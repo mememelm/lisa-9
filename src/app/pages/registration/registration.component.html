@@ -1,0 +1,35 @@
+<app-header-registration [displayRegistration]="false"></app-header-registration>
+
+<div class="page-container text-center">
+  <h1>Créer un compte</h1>
+  <h2>Si c’est votre première connexion</h2>
+  <div class="card card-body">
+    <form [formGroup]="userForm">
+      <div class="form-group">
+        <input class="form-control" type="text" placeholder="Prénom" formControlName="firstname">
+      </div>
+      <div class="form-group">
+        <input class="form-control" type="text" placeholder="Nom" formControlName="lastname">
+      </div>
+      <div class="form-group">
+        <input class="form-control" type="text" placeholder="N° de téléphone portable" formControlName="phone_number">
+      </div>
+      <div class="form-group">
+        <input class="form-control" type="text" placeholder="N° de toque" formControlName="toque_number">
+      </div>
+      <div class="form-group">
+        <input class="form-control" type="email" placeholder="Email" formControlName="email">
+      </div>
+      <div class="form-group">
+        <input class="form-control" type="password" placeholder="Mot de passe" formControlName="password">
+      </div>
+      <div class="form-group">
+        <input class="form-control" type="password" placeholder="Confirmer mot de passe" formControlName="match_password">
+      </div>
+    </form>
+    <div *ngIf="errorPassword">
+      Mots de passe différents
+    </div>
+    <button class="btn btn-success" (click)="register()">S'enregistrer</button>
+  </div>
+</div>

@@ -1,0 +1,26 @@
+@import "../../../../sass/variables.scss";
+
+mat-toolbar {
+  background-color: $header-auth;
+  z-index: 99;
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  margin: auto;
+
+  .title {
+    content: initial;
+    display: block;
+    max-height: 53px;
+    margin: auto;
+    padding: 12px;
+    color: #fff;
+    opacity: 0.8;
+    transition: opacity 0.35s ease-in-out;
+  }
+
+  .title:hover {
+    color: white;
+  }
+}
