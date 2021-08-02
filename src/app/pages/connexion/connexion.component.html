@@ -1,0 +1,17 @@
+<app-header-registration [displayConnexion]="false"></app-header-registration>
+
+<div class="page-container container text-center">
+  <h1>Créer un compte</h1>
+  <h2>Si c’est votre première connexion</h2>
+  <div class="card card-body">
+    <form [formGroup]="userForm">
+      <div class="form-group">
+        <input class="form-control" type="email" placeholder="Email" formControlName="email">
+      </div>
+      <div class="form-group">
+        <input class="form-control" type="password" placeholder="Mot de passe" formControlName="password">
+      </div>
+    </form>
+    <button class="btn btn-success" (click)="connexion()">VALIDER</button>
+  </div>
+</div>

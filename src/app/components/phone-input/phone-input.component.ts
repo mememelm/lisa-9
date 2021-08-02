@@ -11,7 +11,6 @@ export class PhoneInputComponent {
 
   @Input() parentFormGroup: FormGroup
   @Input() controlName: FormControl
-  @Input() placeholder: string
 
   preferredCountries: CountryISO[] = [
     CountryISO.UnitedStates,

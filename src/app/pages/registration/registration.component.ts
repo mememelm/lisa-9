@@ -19,7 +19,7 @@ export class RegistrationComponent implements OnInit {
     this.userForm = this.ctrl.fb.group({
       firstname: ['', [Validators.required, Validators.minLength(2)]],
       lastname: ['', [Validators.required, Validators.minLength(2)]],
-      phone_number: ['', [Validators.required, Validators.minLength(3), Validators.pattern('[- +()0-9]+')]],
+      phone_number: ['', [Validators.required, Validators.minLength(9), Validators.pattern('[- +()0-9]+')]],
       toque_number: ['', [Validators.required, Validators.minLength(3)]],
       email: ['', [Validators.required, Validators.minLength(4), Validators.email]],
       password: ['', Validators.required],
@@ -44,7 +44,7 @@ export class RegistrationComponent implements OnInit {
       password: this.userForm.value['password']
     }
     this.ctrl.api.post(Endpoints.SIGN_IN, body).subscribe((user: any) => {
-      if (user?.success == 'user_created') {
+      if (user?.message == 'user_created') {
         this.ctrl.alert.success("Inscription réussie. Un courriel vous a été envoyé.")
         this.ctrl.router.navigate(['attente-validation'])
       } else {

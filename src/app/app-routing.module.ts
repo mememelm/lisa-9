@@ -1,3 +1,4 @@
+import { ConnexionComponent } from './pages/connexion/connexion.component';
 import { LockedComponent } from './pages/locked/locked.component';
 import { RegistrationComponent } from './pages/registration/registration.component';
 import { HomeComponent } from './pages/home/home.component';
@@ -9,7 +10,8 @@ const routes: Routes = [
   { path: '', redirectTo: 'accueil', pathMatch: 'full' },
   { path: 'accueil', component: HomeComponent },
   { path: 'inscription', component: RegistrationComponent },
-  { path: 'attente-validation', component: LockedComponent }
+  { path: 'attente-validation', component: LockedComponent },
+  { path: 'connexion', component: ConnexionComponent }
 ];
 
 @NgModule({
