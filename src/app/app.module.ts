@@ -20,6 +20,7 @@ import { HeaderRegistrationComponent } from './components/shared/header-registra
 import { HeaderComponent } from './components/shared/header/header.component';
 import { LockedComponent } from './pages/locked/locked.component'
 import { NgxIntlTelInputModule } from 'ngx-intl-tel-input';
+import { PhoneInputComponent } from './components/phone-input/phone-input.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +29,8 @@ import { NgxIntlTelInputModule } from 'ngx-intl-tel-input';
     RegistrationComponent,
     HeaderRegistrationComponent,
     HeaderComponent,
-    LockedComponent
+    LockedComponent,
+    PhoneInputComponent
   ],
   imports: [
     BrowserModule,

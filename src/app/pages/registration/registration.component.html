@@ -1,6 +1,6 @@
 <app-header-registration [displayRegistration]="false"></app-header-registration>
 
-<div class="page-container text-center">
+<div class="page-container container text-center">
   <h1>Créer un compte</h1>
   <h2>Si c’est votre première connexion</h2>
   <div class="card card-body">
@@ -12,7 +12,8 @@
         <input class="form-control" type="text" placeholder="Nom" formControlName="lastname">
       </div>
       <div class="form-group">
-        <input class="form-control" type="text" placeholder="N° de téléphone portable" formControlName="phone_number">
+        <app-phone-input [parentFormGroup]="userForm" controlName="phone_number" placeholder="N° de téléphone portable">
+        </app-phone-input>
       </div>
       <div class="form-group">
         <input class="form-control" type="text" placeholder="N° de toque" formControlName="toque_number">

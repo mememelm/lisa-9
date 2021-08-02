@@ -1,0 +1,8 @@
+<form #f="ngForm" [formGroup]="parentFormGroup" novalidate>
+  <ngx-intl-tel-input [inputId]="'adsasd'" [cssClass]="'form-control'" [preferredCountries]="preferredCountries"
+    [enableAutoCountrySelect]="true" [enablePlaceholder]="true" [searchCountryFlag]="true"
+    [searchCountryField]="[searchCountryField.Iso2, searchCountryField.Name]" [selectFirstCountry]="false"
+    [selectedCountryISO]="countryISO.France" [maxLength]="15" [phoneValidation]="true" [separateDialCode]="true"
+    [formControlName]="controlName" [placeholder]="placeholder">
+  </ngx-intl-tel-input>
+</form>
