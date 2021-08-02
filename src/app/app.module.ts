@@ -23,6 +23,10 @@ import { NgxIntlTelInputModule } from 'ngx-intl-tel-input';
 import { PhoneInputComponent } from './components/phone-input/phone-input.component';
 import { ConnexionComponent } from './pages/connexion/connexion.component';
 import { PrivateSpaceComponent } from './pages/private-space/private-space.component';
+import { FooterComponent } from './components/shared/footer/footer.component';
+import { StoryComponent } from './pages/story/story.component';
+import { SolutionLawyerComponent } from './pages/solution-lawyer/solution-lawyer.component';
+import { ActualityComponent } from './pages/actuality/actuality.component';
 
 @NgModule({
   declarations: [
@@ -34,7 +38,11 @@ import { PrivateSpaceComponent } from './pages/private-space/private-space.compo
     LockedComponent,
     PhoneInputComponent,
     ConnexionComponent,
-    PrivateSpaceComponent
+    PrivateSpaceComponent,
+    FooterComponent,
+    StoryComponent,
+    SolutionLawyerComponent,
+    ActualityComponent
   ],
   imports: [
     BrowserModule,
