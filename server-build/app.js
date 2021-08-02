@@ -840,14 +840,13 @@ app.post("/member", async (req, res) => {
 // CONFIRME ACCOUNT
 app.get("/enable_user/:id", async (req, res) => {
   const user = await dbSequelize.hoomeUsersAcl.findByPk(req.params.id);
-  console.log(user);
   user.update({
     account_state: 1,
   });
-  if (user === null) {
-    console.log("Not found!");
+  if (!user) {
+    res.status(200).json({ message: 'no_user', data: null });
   } else {
-    res.json({ data: user });
+    res.status(200).json({ message: 'success', data: user });
     let subject = "CONFIRMATION DE VOTRE COMPTE SUR 1274.fr";
     let textUser =
       "<b>Cher utilisateur,</b> <br> " +
