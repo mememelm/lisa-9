@@ -5,5 +5,8 @@ import { Injectable } from '@angular/core';
 })
 export class StorageService {
 
-  constructor() { }
+  public user() {
+    return JSON.parse(localStorage.getItem('USER'))
+  }
+
 }

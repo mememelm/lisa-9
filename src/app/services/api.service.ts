@@ -19,4 +19,12 @@ export class ApiService {
   post(endPoints: string, body: Object): Observable<any> {
     return this.http.post<any>(this.apiUrl + endPoints, JSON.stringify(body))
   }
+
+  delete(endPoints: string): Observable<any> {
+    return this.http.delete<any>(this.apiUrl + endPoints)
+  }
+
+  put(endPoints: string, body: Object): Observable<any> {
+    return this.http.put<any>(this.apiUrl + endPoints, JSON.stringify(body))
+  }
 }

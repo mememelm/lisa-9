@@ -1,3 +1,5 @@
+import { PrivateSpaceComponent } from './pages/private-space/private-space.component';
+import { UserRoleComponent } from './pages/admin/user-role/user-role.component';
 import { ActualityComponent } from './pages/actuality/actuality.component';
 import { SolutionLawyerComponent } from './pages/solution-lawyer/solution-lawyer.component';
 import { ConnexionComponent } from './pages/connexion/connexion.component';
@@ -18,6 +20,8 @@ const routes: Routes = [
   { path: 'notre-histoire', component: StoryComponent },
   { path: 'avocat-mandataire-immobilier', component: SolutionLawyerComponent },
   { path: 'actualites', component: ActualityComponent },
+  { path: 'espace-prive', component: PrivateSpaceComponent },
+  { path: 'admin-user-role', component: UserRoleComponent },
 ];
 
 @NgModule({

@@ -31,7 +31,7 @@ export class ConnexionComponent implements OnInit {
           this.ctrl.alert.warn("Mot de passe incorrect")
           break
         case 'success':
-          this.afterCheckConnexion(user?.res['account_state'])
+          this.afterCheckConnexion(user)
           break
         default:
           break
@@ -39,8 +39,19 @@ export class ConnexionComponent implements OnInit {
     })
   }
 
-  afterCheckConnexion(accountState: boolean) {
-    accountState ? this.ctrl.router.navigate(['espace-prive']) : this.ctrl.router.navigate(['attente-validation'])
+  afterCheckConnexion(user: any) {
+    if (user?.res['account_state']) {
+      localStorage.setItem('USER', JSON.stringify(user?.res))
+      this.ctrl.router.navigate(['espace-prive'])
+    } else {
+      this.ctrl.router.navigate(['attente-validation'])
+    }
+  }
+
+  getRoleUser(roleId: number) {
+    this.ctrl.api.get(Endpoints.ROLE_GET + roleId).subscribe((role: any) => {
+
+    })
   }
 
 }

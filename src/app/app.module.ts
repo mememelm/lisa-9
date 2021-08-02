@@ -27,6 +27,7 @@ import { FooterComponent } from './components/shared/footer/footer.component';
 import { StoryComponent } from './pages/story/story.component';
 import { SolutionLawyerComponent } from './pages/solution-lawyer/solution-lawyer.component';
 import { ActualityComponent } from './pages/actuality/actuality.component';
+import { UserRoleComponent } from './pages/admin/user-role/user-role.component';
 
 @NgModule({
   declarations: [
@@ -42,7 +43,8 @@ import { ActualityComponent } from './pages/actuality/actuality.component';
     FooterComponent,
     StoryComponent,
     SolutionLawyerComponent,
-    ActualityComponent
+    ActualityComponent,
+    UserRoleComponent
   ],
   imports: [
     BrowserModule,
