@@ -1,3 +1,4 @@
+import { Role } from './role';
 export interface UserAcl {
   user_acl_ID?: number
   email?: string
@@ -53,4 +54,5 @@ export interface UserAcl {
   account_state?: boolean
   toque_number?: string
   hoomeRoleUserRoleID?: number
+  hoome_role_user: Role
 }

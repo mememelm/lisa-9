@@ -1,3 +1,4 @@
+import { UserListComponent } from './pages/admin/user-list/user-list.component';
 import { PrivateSpaceComponent } from './pages/private-space/private-space.component';
 import { UserRoleComponent } from './pages/admin/user-role/user-role.component';
 import { ActualityComponent } from './pages/actuality/actuality.component';
@@ -21,6 +22,7 @@ const routes: Routes = [
   { path: 'actualites', component: ActualityComponent },
   { path: 'espace-prive', component: PrivateSpaceComponent },
   { path: 'admin-user-role', component: UserRoleComponent },
+  { path: 'admin-user-list', component: UserListComponent },
 ];
 
 @NgModule({

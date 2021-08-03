@@ -1,0 +1,17 @@
+<div class="modal-header">
+  <h5>Suppression {{title}}</h5>
+  <button type="button" class="close" data-dismiss="modal" aria-label="Close" (click)="ctrl.closeModal()">
+    <span aria-hidden="true">&times;</span>
+  </button>
+</div>
+<div class="modal-body modal-connect d-flex justify-content-center">
+  Etes-vous sûr de vouloir supprimer {{subtitle}} ?
+</div>
+<div class="form-group d-flex justify-content-center mt-5">
+  <button class="btn btn-md btn-primary mr-1" (click)="actionDelete()">
+    Valider
+  </button>
+  <button class="btn btn-md btn-primary ml-1" (click)="ctrl.closeModal()">
+    Annuler
+  </button>
+</div>

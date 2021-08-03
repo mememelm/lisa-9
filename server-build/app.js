@@ -1239,52 +1239,6 @@ app.post("/login", (req, res) => {
   const email = req.body.email;
   const password = req.body.password;
 
-  // try {
-  //   // const sql = `SELECT * FROM hoome_user_acl where email='${email}'`;
-  //   const sqlWithRole = `SELECT huse.*, hrole.*  FROM hoome_user_acl AS huse LEFT JOIN hoome_role_users AS hrole 
-  //     ON huse.hoomeRoleUserRoleID = hrole.role_ID WHERE email='${email}'`;
-  //   connection.query(sqlWithRole, async (error, result) => {
-  //     if (error) {
-  //       res.status(403).json({ message: error });
-  //       //throw error;
-  //     }
-  //     if (result.length > 0) {
-  //       const hashedPassword = result[0].password;
-  //       const same = await bcrypt.compare(password, hashedPassword);
-  //       if (same) {
-  //         res.status(202).json({
-  //           message: "success",
-  //           res: result[0],
-  //         });
-  //       } else {
-  //         res.status(401).json({ message: "error_password" });
-  //       }
-  //     } else {
-  //       const sql_other_user = `SELECT * FROM hoome_main_user where email='${email}'`;
-  //       connection.query(sql_other_user, async (error, result) => {
-  //         if (error) {
-  //           res.status(500).json({ message: error });
-  //           throw error;
-  //         }
-  //         if (result.length > 0) {
-  //           const hashedPassword = result[0].password;
-  //           const same = await bcrypt.compare(password, hashedPassword);
-  //           if (same) {
-  //             res.status(202).json({
-  //               message: "success",
-  //               res: result[0],
-  //             });
-  //           } else {
-  //             res.status(401).json({ message: "Unauthorized " });
-  //           }
-  //         }
-  //       });
-  //     }
-  //   });
-  // } catch (error) {
-  //   res.status(500).json({ message: error });
-  // }
-
   const query =
     `SELECT huse.*, hrole.*  FROM hoome_user_acl AS huse LEFT JOIN hoome_role_users AS hrole 
     ON huse.hoomeRoleUserRoleID = hrole.role_ID WHERE email='${email}'`
@@ -2313,5 +2267,7 @@ httpServer.listen(3000, () => {
 // test pour push melman
 // test repush
 // third test
+
+// NEW API => refacte m
 
 module.exports = app;

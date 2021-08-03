@@ -31,6 +31,11 @@ export class ControllerService {
     return alert
   }
 
+  checkResultChange(res: any, reload: void, alert: void) {
+    res.message == 'success' ? this.initializeSuccess(reload, alert)
+      : this.alert.actionError()
+  }
+
   async logOut() {
     await <any>localStorage.removeItem('USER')
     this.closeModal()

@@ -14,5 +14,6 @@ export class RoutesExt {
   public actuality = '/actualites'
   public privateSpace = '/espace-prive'
   public adminUserRole = '/admin-user-role'
+  public adminUserList = '/admin-user-list'
 
 }

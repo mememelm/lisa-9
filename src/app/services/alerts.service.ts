@@ -27,14 +27,14 @@ export class AlertsService {
   }
 
   actionSuccess() {
-    this.toastr.error('Enregistrement réussi.')
+    this.toastr.success('Enregistrement réussi.')
   }
 
   actionUpdate() {
-    this.toastr.error('Modification réussie.')
+    this.toastr.success('Modification réussie.')
   }
 
   actionDelete() {
-    this.toastr.error('Suppression effectuée.')
+    this.toastr.success('Suppression effectuée.')
   }
 }

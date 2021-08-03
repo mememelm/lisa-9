@@ -17,6 +17,7 @@ import { BackButtonDisableModule } from 'angular-disable-browser-back-button';
 import { DataTablesModule } from 'angular-datatables';
 import { NgxIntlTelInputModule } from 'ngx-intl-tel-input';
 import { MatToolbarModule } from '@angular/material/toolbar'
+import { MatCheckboxModule } from '@angular/material/checkbox'
 
 import { HeaderRegistrationComponent } from './components/shared/header-registration/header-registration.component';
 import { HeaderComponent } from './components/shared/header/header.component';
@@ -29,6 +30,8 @@ import { StoryComponent } from './pages/story/story.component';
 import { SolutionLawyerComponent } from './pages/solution-lawyer/solution-lawyer.component';
 import { ActualityComponent } from './pages/actuality/actuality.component';
 import { UserRoleComponent } from './pages/admin/user-role/user-role.component';
+import { UserListComponent } from './pages/admin/user-list/user-list.component';
+import { ModalDeleteComponent } from './components/shared/modal-delete/modal-delete.component';
 
 @NgModule({
   declarations: [
@@ -45,7 +48,9 @@ import { UserRoleComponent } from './pages/admin/user-role/user-role.component';
     StoryComponent,
     SolutionLawyerComponent,
     ActualityComponent,
-    UserRoleComponent
+    UserRoleComponent,
+    UserListComponent,
+    ModalDeleteComponent,
   ],
   imports: [
     BrowserModule,
@@ -60,7 +65,8 @@ import { UserRoleComponent } from './pages/admin/user-role/user-role.component';
     ToastrModule.forRoot({ timeOut: 5000, positionClass: 'toast-bottom-right', preventDuplicates: true, closeButton: true }),
     BackButtonDisableModule.forRoot({ preserveScrollPosition: true }),
     NgxIntlTelInputModule,
-    DataTablesModule
+    DataTablesModule,
+    MatCheckboxModule
   ],
   providers: [
     { provide: HTTP_INTERCEPTORS, useClass: EnvInterceptor, multi: true },

@@ -19,6 +19,7 @@ export class UserRoleComponent implements OnInit, OnChanges, OnDestroy {
 
   roleForm: FormGroup
   listRole: Role[]
+  action: string
 
   constructor(public ctrl: ControllerService) { }
 
@@ -28,7 +29,7 @@ export class UserRoleComponent implements OnInit, OnChanges, OnDestroy {
     }
 
     this.roleForm = this.ctrl.fb.group({
-      id: [''],
+      role_ID: [''],
       label: ['', Validators.required],
       abbreviation: ['', Validators.required],
       active: [1]
@@ -67,6 +68,36 @@ export class UserRoleComponent implements OnInit, OnChanges, OnDestroy {
       dtInstance.destroy()
       this.loadRole()
     })
+  }
+
+  addRole() {
+    this.ctrl.api.post(Endpoints.ROLE_ADD, this.roleForm.value).subscribe((role: any) => {
+      this.ctrl.checkResultChange(role, this.loadChange(), this.ctrl.alert.actionSuccess())
+    })
+  }
+
+  updateRole() {
+    this.ctrl.api.put(Endpoints.ROLE_UPDATE + this.roleForm.value['role_ID'], this.roleForm.value).subscribe((role: any) => {
+      this.ctrl.checkResultChange(role, this.loadChange(), this.ctrl.alert.actionUpdate())
+    })
+  }
+
+  deleteRole() {
+    this.ctrl.api.delete(Endpoints.ROLE_DELETE + this.roleForm.value['role_ID']).subscribe((role: any) => {
+      this.ctrl.checkResultChange(role, this.loadChange(), this.ctrl.alert.actionDelete())
+    })
+  }
+
+  selectRole(role: Role, container) {
+    this.action = 'update'
+    this.roleForm.setValue(role)
+    this.ctrl.openModal(container, '')
+  }
+
+  resetForm() {
+    this.action = 'add'
+    this.roleForm.reset()
+    this.ctrl.closeModal()
   }
 
 }

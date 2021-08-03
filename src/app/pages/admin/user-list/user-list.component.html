@@ -1,0 +1,76 @@
+<div class="container">
+  <div class="mt-3">
+    <h3 class="d-inline">Liste des utilisateurs</h3>
+    <button type="button" class="btn btn-md btn-primary d-inline float-right" [routerLink]="ctrl.route.adminUserRole">
+      Liste des rôles
+    </button>
+  </div>
+
+  <div class="card container mt-4">
+    <table datatable class="table-striped row-border hover" [dtOptions]="dtOptions" [dtTrigger]="dtTrigger">
+      <thead>
+        <tr>
+          <th>Email</th>
+          <th>Nom complet</th>
+          <th>N° téléphone</th>
+          <th>N° toque</th>
+          <th>N° type de compte</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let user of listUser" class="animate__animated animate__flipInX cursor-cl"
+          (click)="selectUser(user, actionModal)">
+          <td>{{user.email}}</td>
+          <td>{{user.firstname | titlecase}} {{user.lastname | titlecase}}</td>
+          <td>{{user.phone_number}}</td>
+          <td>{{user.toque_number}}</td>
+          <td>{{user?.hoome_role_user?.label}}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+<ng-template #actionModal>
+  <div class="modal-header">
+    <h5>Informations utilisateur</h5>
+    <button type="button" class="close" data-dismiss="modal" aria-label="Close" (click)="ctrl.closeModal()">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+
+  <div class="modal-body">
+    <div class="row">
+      <div class="col-md-3">
+        <i class="material-icons icon-detail">mail</i> {{user?.email}}
+      </div>
+      <div class="col-md-3">
+        <i class="material-icons icon-detail">person</i> {{user.firstname | titlecase}} {{user.lastname | titlecase}}
+      </div>
+      <div class="col-md-3">
+        <i class="material-icons icon-detail">phone</i> <b> {{user.phone_number}}</b>
+      </div>
+      <div class="col-md-3">
+        <i class="material-icons icon-detail">account_balance_wallet</i> <b> {{user.toque_number}}</b>
+      </div>
+      <div class="col-md-3" *ngIf="user?.hoome_role_user?.label">
+        <i class="material-icons icon-detail">manage_accounts</i> {{user?.hoome_role_user?.label}}
+      </div>
+    </div>
+    <hr>
+    <div class="row">
+      Modifier le type d'utilisateur
+      <div [formGroup]="userForm">
+        <select formControlName="hoomeRoleUserRoleID">
+          <option *ngFor="let role of listRole" value="{{role.role_ID}}">
+            {{role.abbreviation}} - {{role.label}}
+          </option>
+        </select>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal-footer">
+    <button class="btn btn-primary" (click)="updateUser()">Modifier</button>
+  </div>
+</ng-template>
