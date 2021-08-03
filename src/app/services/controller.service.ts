@@ -37,7 +37,7 @@ export class ControllerService {
   }
 
   async logOut() {
-    await <any>localStorage.removeItem('USER')
+    await <any>localStorage.clear()
     this.closeModal()
     this.router.navigate([''])
   }

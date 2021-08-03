@@ -1,0 +1,12 @@
+@import '../../../../sass/variables.scss';
+
+.my-footer {
+  margin-top: 15px;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: $black-footer;
+  color: white;
+  text-align: center;
+  min-height: 200px;
+}

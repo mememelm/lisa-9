@@ -34,6 +34,7 @@ import { UserListComponent } from './pages/admin/user-list/user-list.component';
 import { ModalDeleteComponent } from './components/shared/modal-delete/modal-delete.component';
 import { PrivateDocumentationComponent } from './components/private-documentation/private-documentation.component';
 import { PrivateAdviceComponent } from './components/private-advice/private-advice.component';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 @NgModule({
   declarations: [
@@ -70,7 +71,8 @@ import { PrivateAdviceComponent } from './components/private-advice/private-advi
     BackButtonDisableModule.forRoot({ preserveScrollPosition: true }),
     NgxIntlTelInputModule,
     DataTablesModule,
-    MatCheckboxModule
+    MatCheckboxModule,
+    FontAwesomeModule,
   ],
   providers: [
     { provide: HTTP_INTERCEPTORS, useClass: EnvInterceptor, multi: true },
