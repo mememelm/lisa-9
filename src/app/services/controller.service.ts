@@ -49,4 +49,8 @@ export class ControllerService {
   closeModal() {
     this.modal.dismissAll()
   }
+
+  scrollElement(element: any) {
+    element.scrollIntoView({ behavior: "smooth", block: "start", inline: "nearest" })
+  }
 }

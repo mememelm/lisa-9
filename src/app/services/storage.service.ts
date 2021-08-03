@@ -9,4 +9,8 @@ export class StorageService {
     return JSON.parse(localStorage.getItem('USER'))
   }
 
+  public role() {
+    return JSON.parse(localStorage.getItem('ROLE'))
+  }
+
 }

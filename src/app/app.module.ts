@@ -32,6 +32,8 @@ import { ActualityComponent } from './pages/actuality/actuality.component';
 import { UserRoleComponent } from './pages/admin/user-role/user-role.component';
 import { UserListComponent } from './pages/admin/user-list/user-list.component';
 import { ModalDeleteComponent } from './components/shared/modal-delete/modal-delete.component';
+import { PrivateDocumentationComponent } from './components/private-documentation/private-documentation.component';
+import { PrivateAdviceComponent } from './components/private-advice/private-advice.component';
 
 @NgModule({
   declarations: [
@@ -51,6 +53,8 @@ import { ModalDeleteComponent } from './components/shared/modal-delete/modal-del
     UserRoleComponent,
     UserListComponent,
     ModalDeleteComponent,
+    PrivateDocumentationComponent,
+    PrivateAdviceComponent,
   ],
   imports: [
     BrowserModule,

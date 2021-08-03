@@ -1,0 +1,25 @@
+.private-header {
+  background: white;
+  opacity: 0.8;
+  padding: 35px;
+  width: 50%;
+}
+
+.container-navigate-mandats {
+  height: 150px;
+  width: 185px;
+  font-size: large;
+  background: white;
+  opacity: 0.9;
+  clip-path: polygon(0% 0%, 99% 0%, 99% 100%, 18% 100%, 0% 82%);
+  color: orangered;
+}
+
+.container-navigate {
+  height: 150px;
+  width: 185px;
+  font-size: large;
+  background: #a0afc1;
+  clip-path: polygon(0% 0%, 99% 0%, 99% 100%, 18% 100%, 0% 82%);
+  padding-left: 15px;
+}

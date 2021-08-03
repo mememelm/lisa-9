@@ -91,6 +91,4 @@ export class UserListComponent implements OnInit, OnChanges, OnDestroy {
       this.ctrl.checkResultChange(user, this.loadChange(), this.ctrl.alert.actionUpdate())
     })
   }
-
-
 }
