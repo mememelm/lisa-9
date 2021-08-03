@@ -1,5 +1,5 @@
 import { RouterModule } from '@angular/router';
-import { BrowserModule } from '@angular/platform-browser';
+
 import { CUSTOM_ELEMENTS_SCHEMA, NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
@@ -10,7 +10,10 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { HomeComponent } from './pages/home/home.component';
 import { RegistrationComponent } from './pages/registration/registration.component';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations'
+
+import { FlexLayoutModule } from '@angular/flex-layout';
+import { BrowserModule } from '@angular/platform-browser';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { ToastrModule } from 'ngx-toastr';
 import { BackButtonDisableModule } from 'angular-disable-browser-back-button';
@@ -22,15 +25,19 @@ import { MatInputModule } from '@angular/material/input'
 import { MatFormFieldModule } from '@angular/material/form-field'
 import { MatRadioModule } from '@angular/material/radio'
 import { MatSelectModule } from '@angular/material/select'
+import { MatSidenavModule } from '@angular/material/sidenav';
+import { MatIconModule } from '@angular/material/icon';
+import { MatButtonModule } from '@angular/material/button';
 
 import { HeaderRegistrationComponent } from './components/shared/header-registration/header-registration.component';
 import { HeaderComponent } from './components/shared/header/header.component';
-import { LockedComponent } from './pages/locked/locked.component'
+import { LockedComponent } from './pages/locked/locked.component';
 import { PhoneInputComponent } from './components/phone-input/phone-input.component';
 import { ConnexionComponent } from './pages/connexion/connexion.component';
 import { PrivateSpaceComponent } from './pages/private-space/private-space.component';
 import { FooterComponent } from './components/shared/footer/footer.component';
 import { StoryComponent } from './pages/story/story.component';
+
 import { SolutionLawyerComponent } from './pages/solution-lawyer/solution-lawyer.component';
 import { ActualityComponent } from './pages/actuality/actuality.component';
 import { UserRoleComponent } from './pages/admin/user-role/user-role.component';
@@ -78,12 +85,18 @@ import { SocietyLawyerInformationComponent } from './components/undersigned/soci
     AppRoutingModule,
     HttpClientModule,
     FormsModule,
+    FlexLayoutModule,
     NgbModule,
     RouterModule,
     BrowserAnimationsModule,
     MatToolbarModule,
     ReactiveFormsModule,
-    ToastrModule.forRoot({ timeOut: 5000, positionClass: 'toast-bottom-right', preventDuplicates: true, closeButton: true }),
+    ToastrModule.forRoot({
+      timeOut: 5000,
+      positionClass: 'toast-bottom-right',
+      preventDuplicates: true,
+      closeButton: true
+    }),
     BackButtonDisableModule.forRoot({ preserveScrollPosition: true }),
     NgxIntlTelInputModule,
     DataTablesModule,
@@ -93,11 +106,15 @@ import { SocietyLawyerInformationComponent } from './components/undersigned/soci
     MatFormFieldModule,
     MatRadioModule,
     MatSelectModule
+    MatSidenavModule,
+    MatIconModule,
+    MatButtonModule,
+    FontAwesomeModule
   ],
   providers: [
-    { provide: HTTP_INTERCEPTORS, useClass: EnvInterceptor, multi: true },
+    { provide: HTTP_INTERCEPTORS, useClass: EnvInterceptor, multi: true }
   ],
   bootstrap: [AppComponent],
   schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })
-export class AppModule { }
+export class AppModule {}
