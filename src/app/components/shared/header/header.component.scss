@@ -1,6 +1,6 @@
 @import "../../../../sass/variables.scss";
 
-mat-toolbar {
+/*mat-toolbar {
   z-index: 99;
   position: fixed;
   top: 0;
@@ -17,5 +17,49 @@ mat-toolbar {
     color: $black-theme;
     opacity: 0.8;
     transition: opacity 0.35s ease-in-out;
+  }
+}
+*/
+.content-header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  border-bottom: 1px solid #f3f3f3;
+  mat-toolbar {
+    background-color: #ffffff;
+    .nav-link-item {
+      text-transform: uppercase;
+      font-weight: 700;
+      color: #000;
+    }
+  }
+}
+.container-menu-responsive {
+  height: calc(100vh - 64px);
+  position: fixed;
+  top: 63px;
+  width: 100%;
+  max-width: 272px;
+}
+.top-header {
+  height: 80px;
+}
+.img-logo {
+  width: 320px;
+}
+.icon-avocat-user {
+  width: 40px;
+  padding-left: 4px;
+  border-left: 2px solid #a5a5a5;
+}
+.link-inscrire {
+  text-decoration: none;
+  span {
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 1rem;
+    color: #222;
+    padding-right: 10px;
+    line-height: 1;
   }
 }

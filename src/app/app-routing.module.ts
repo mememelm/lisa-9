@@ -22,11 +22,11 @@ const routes: Routes = [
   { path: 'actualites', component: ActualityComponent },
   { path: 'espace-prive', component: PrivateSpaceComponent },
   { path: 'admin-user-role', component: UserRoleComponent },
-  { path: 'admin-user-list', component: UserListComponent },
+  { path: 'admin-user-list', component: UserListComponent }
 ];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule]
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {}
