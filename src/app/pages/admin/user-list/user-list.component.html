@@ -41,19 +41,19 @@
 
   <div class="modal-body">
     <div class="row">
-      <div class="col-md-3">
+      <div class="col-md-4">
         <i class="material-icons icon-detail">mail</i> {{user?.email}}
       </div>
-      <div class="col-md-3">
+      <div class="col-md-4">
         <i class="material-icons icon-detail">person</i> {{user.firstname | titlecase}} {{user.lastname | titlecase}}
       </div>
-      <div class="col-md-3">
+      <div class="col-md-4">
         <i class="material-icons icon-detail">phone</i> <b> {{user.phone_number}}</b>
       </div>
-      <div class="col-md-3">
+      <div class="col-md-4">
         <i class="material-icons icon-detail">account_balance_wallet</i> <b> {{user.toque_number}}</b>
       </div>
-      <div class="col-md-3" *ngIf="user?.hoome_role_user?.label">
+      <div class="col-md-4" *ngIf="user?.hoome_role_user?.label">
         <i class="material-icons icon-detail">manage_accounts</i> {{user?.hoome_role_user?.label}}
       </div>
     </div>

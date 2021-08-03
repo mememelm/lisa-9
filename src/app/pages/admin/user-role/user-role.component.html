@@ -19,7 +19,7 @@
           <th>Description</th>
           <th>Abbréviation</th>
           <th>Status</th>
-          <th>Action</th>
+          <th></th>
         </tr>
       </thead>
       <tbody>
@@ -31,7 +31,7 @@
             <span *ngIf="!role.active">Inactif</span>
           </td>
           <td>
-            <button class="btn btn-danger btn-sm grad-delete" (click)="selectRole(role, deleteModal)">
+            <button class="btn btn-danger btn-sm" (click)="selectRole(role, deleteModal)">
               <span class="material-icons">delete</span>
             </button>
           </td>
