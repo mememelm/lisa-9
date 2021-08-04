@@ -1,50 +1,72 @@
 <footer>
-  <div class="row my-footer">
-    <div class="col-3">
-      <h5>L'IMMOBILIÈRE AU SERVICE DES AVOCATS</h5>
-      <li><a [routerLink]="ctrl.route.story">Notre histoire</a></li>
-      <li><a [routerLink]="ctrl.route.solutionLawyer">La solution avocat</a></li>
-      <li><a [routerLink]="ctrl.route.actuality">Actualités</a></li>
-      <li>
-        <a routerLink="/mention-legal/">Mentions Légales </a> &
-        <a routerLink="/cgu/"> CGU</a>
-      </li>
-      <li><a [routerLink]="ctrl.route.connexion">Connexion</a></li>
-      <li><a [routerLink]="ctrl.route.registration">Inscrivez-vous</a></li>
-    </div>
-    <div class="col-3">
-      <h5>TROUVEZ-NOUS !</h5>
-      <li><a> 58 avenue Bosquet<br />75007 PARIS</a></li>
-      <li><a href="mailto:hello@lisa-plateforme.com">hello@lisa-plateforme.com</a></li>
-      <li><a href="tel:+33184797019">Tél. 01 84 79 70 19</a></li>
-    </div>
-    <div class="col-3">
-      <h5># SUIVEZ-NOUS</h5>
-      <li>
-        <a href="https://www.linkedin.com/company/1274-avocats/" target="_blank" class="inline-block p1"
-          aria-label="immobilier avocat linkedin"><i class="fab fa-linkedin"></i></a>
-      </li>
-      <li>
-        <a href="https://www.facebook.com/1274_immobili%C3%A8re_des_avocats-102311111670278/" target="_blank"
-          class="inline-block p1" aria-label="immobilier avocat FaceBook"><i class="fab fa-facebook-square"></i></a>
-      </li>
-      <li>
-        <a href="https://twitter.com/1274avocat" target="_blank" class="inline-block p1"
-          aria-label="immobilier avocat twitter"><i class="fab fa-twitter-square"></i></a>
-      </li>
-      <li>
-        <a href="mailto:hello@lisa-plateforme.com" target="_blank" class="inline-block p1"
-          aria-label="immobilier avocat mail"><i class="fas fa-envelope"></i></a>
-      </li>
-      <li>
-        <a href="https://www.google.com/search?ei=GRt_X7mlOoTAa47iiugG&q=1274+avocats&oq=1274+avocats&gs_lcp=CgZwc3ktYWIQAzoHCAAQyQMQEzoECAAQEzoCCCY6CAgAEBYQHhATOggIABDJAxCRAjoFCAAQkQI6BAgAEEM6AggAOgIILjoKCC4QyQMQQxCTAjoFCAAQyQM6BggAEBYQHjoLCAAQyQMQFhAKEB46BQghEKABUK5BWKRlYJhmaAJwAHgAgAFOiAGxBpIBAjEzmAEAoAEBqgEHZ3dzLXdpesABAQ&sclient=psy-ab&ved=0ahUKEwj5laPak6XsAhUE4BoKHQ6xAm0Q4dUDCA0&uact=5#"
-          target="_blank" class="inline-block p1" aria-label="immobilier avocat map"><i
-            class="fas fa-map-marker-alt"></i></a>
-      </li>
-    </div>
-    <div class="col-3">
-      <img src="../../../../assets/images/logo3.png" width="267" height="75" layout="fixed" class="my0 mx-auto"
-        alt="logo avocat mandataire immobilier">
+  <div class="my-footer">
+    <div fxLayout="column" fxLayout.gt-sm="row" fxLayoutAlign="center center" fxLayoutAlign.gt-sm="space-between top"
+      class="container-large">
+      <div class="mr-2 col-footer">
+        <h5 class="text-left text-sm-gt-center">L'IMMOBILIÈRE AU SERVICE DES AVOCATS</h5>
+        <ul class="text-sm-gt-center">
+          <li><a [routerLink]="ctrl.route.story">Notre histoire</a></li>
+          <li><a [routerLink]="ctrl.route.solutionLawyer">La solution avocat</a></li>
+          <li><a [routerLink]="ctrl.route.actuality">Actualités</a></li>
+          <li>
+            <a routerLink="/mention-legal/">Mentions Légales </a> &
+            <a routerLink="/cgu/"> CGU</a>
+          </li>
+          <li><a [routerLink]="ctrl.route.connexion">Connexion</a></li>
+          <li><a [routerLink]="ctrl.route.registration">Inscrivez-vous</a></li>
+        </ul>
+
+      </div>
+      <div class="mr-2 col-footer">
+        <h5 class="text-left text-sm-gt-center">TROUVEZ-NOUS !</h5>
+        <ul class="text-sm-gt-center">
+          <li><a> 58 avenue Bosquet<br />75007 PARIS</a></li>
+          <li><a href="mailto:hello@lisa-plateforme.com">hello@lisa-plateforme.com</a></li>
+          <li><a href="tel:+33184797019">Tél. 01 84 79 70 19</a></li>
+        </ul>
+
+      </div>
+      <div class="mr-2 col-footer" style='min-width: 128px;'>
+        <h5 class="text-left text-sm-gt-center"> SUIVEZ-NOUS</h5>
+        <ul fxLayout="row" fxLayoutGap fxLayoutAlign="center center" fxLayoutAlign.gt-sm="start center"
+          class="text-sm-gt-center">
+          <li>
+            <a href="https://www.linkedin.com/company/1274-avocats/" target="_blank" class="inline-block p1"
+              aria-label="immobilier avocat linkedin">
+
+            </a>
+          </li>
+          <li>
+            <a href="https://www.facebook.com/1274_immobili%C3%A8re_des_avocats-102311111670278/" target="_blank"
+              class="inline-block p1" aria-label="immobilier avocat FaceBook">
+
+            </a>
+          </li>
+          <li>
+            <a href="https://twitter.com/1274avocat" target="_blank" class="inline-block p1"
+              aria-label="immobilier avocat twitter">
+
+            </a>
+          </li>
+          <li>
+            <a href="mailto:hello@lisa-plateforme.com" target="_blank" class="inline-block p1"
+              aria-label="immobilier avocat mail">
+              <mat-icon aria-hidden="false" aria-label="Example email icon">email</mat-icon>
+            </a>
+          </li>
+          <li>
+            <a href="https://www.google.com/search?ei=GRt_X7mlOoTAa47iiugG&q=1274+avocats&oq=1274+avocats&gs_lcp=CgZwc3ktYWIQAzoHCAAQyQMQEzoECAAQEzoCCCY6CAgAEBYQHhATOggIABDJAxCRAjoFCAAQkQI6BAgAEEM6AggAOgIILjoKCC4QyQMQQxCTAjoFCAAQyQM6BggAEBYQHjoLCAAQyQMQFhAKEB46BQghEKABUK5BWKRlYJhmaAJwAHgAgAFOiAGxBpIBAjEzmAEAoAEBqgEHZ3dzLXdpesABAQ&sclient=psy-ab&ved=0ahUKEwj5laPak6XsAhUE4BoKHQ6xAm0Q4dUDCA0&uact=5#"
+              target="_blank" class="inline-block p1" aria-label="immobilier avocat map">
+              <mat-icon aria-hidden="false" aria-label="Example place icon">place</mat-icon>
+            </a>
+          </li>
+        </ul>
+
+      </div>
+      <div class="text-sm-gt-center">
+        <img src="../../../../assets/images/logo-lisa-footer.svg" layout="fixed" class="logo-footer"
+          alt="logo avocat mandataire immobilier">
+      </div>
     </div>
   </div>
 </footer>
