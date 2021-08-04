@@ -7,10 +7,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./footer.component.scss']
 })
 export class FooterComponent implements OnInit {
+  constructor(public ctrl: ControllerService) {}
 
-  constructor(public ctrl: ControllerService) { }
-
-  ngOnInit(): void {
-  }
-
+  ngOnInit(): void {}
 }

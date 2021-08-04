@@ -1,12 +1,33 @@
-@import '../../../../sass/variables.scss';
+@import "../../../../sass/variables.scss";
 
 .my-footer {
-  margin-top: 15px;
-  left: 0;
-  bottom: 0;
   width: 100%;
   background-color: $black-footer;
-  color: white;
-  text-align: center;
-  min-height: 200px;
+  color: #fff;
+  padding: 2.5rem 0;
+}
+a {
+  color: #fff;
+}
+.mr-2 {
+  margin-right: 12px;
+}
+.logo-footer {
+  width: 100%;
+  max-width: 267px;
+}
+
+@media screen and (max-width: 960px) {
+  .col-footer {
+    width: 100%;
+    border-bottom: 1px solid #dcdcdc;
+
+    padding: 1.5rem;
+  }
+  .text-sm-gt-center {
+    text-align: center;
+  }
+  .logo-footer {
+    margin-top: 1.5rem;
+  }
 }
