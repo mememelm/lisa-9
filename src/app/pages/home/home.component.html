@@ -7,7 +7,7 @@
       <div fxLayout="column" fxLayoutAlign="space-between center"
         class="md-mx-auto position-absolute content-text-banner-header">
         <div class="text-banner">
-          <h1 style="font-size:2.2rem; font-family: 'OPEN', sans-serif; text-align: center; font-weight:bolder; ">
+          <h1 class="h1">
             <span>UNE SOLUTION NOUVELLE </span>
             <br>
             EXCLUSIVEMENT DÉDIÉE AUX AVOCATS
@@ -16,43 +16,96 @@
             Pour piloter et développer l’activité complémentaire de mandataire en transactions immobilières
           </p>
         </div>
-        <a href="#debut">
+        <a href="#service">
           suite
         </a>
       </div>
     </div>
   </section>
-  <div class="container-base">
-    <div class="">
-      <img class="commerce-hero-image w100 h100" src="../../../assets/images/1274-pilotage-avocat.jpg" width="560"
-        height="320" layout="responsive" alt="1274-l'immobilieredesavocats">
-    </div>
+  <section class="section-service">
+    <div class="container-base" fxLayout="column" fxLayoutGap fxLayoutAlign="center center">
+      <div  class="service-right pb4" fxLayout="column" fxLayout.gt-sm="row">
+        <div class="img-left">
+          <img src="../../../assets/images/1274-pilotage-avocat.jpg" 
+             layout="responsive" alt="l'immobilieredesavocats">
+        </div>
+    
+        <div class="service-info service-info-right">
+          <h2 class="h2" id="service" >
+            LISA, LA SOLUTION DE <span>PILOTAGE DE VENTE DE BIENS IMMOBILIERS</span> adaptée AUX <span>AVOCATS</span>, RESPECTUEUSE des <span>règles et usages</span> de la profession
+          </h2>
+          <ul>
+            <li>Les avocats sont les mieux placés pour vendre les biens immobiliers de leurs clients&nbsp;!</li>
+            <li>Ils connaissent les tenants et aboutissants de chaque lot et de chaque affaire.</li>
+            <li>Les avocats peuvent développer de nouvelles sources de revenus.</li>
+          </ul>
+          <p class="p">
+            <span>UNE SOLUTION NOUVELLE CLÉS EN MAIN RIEN QUE POUR LES
+              AVOCATS&nbsp;!</span>
+          </p>
+         
+          <a class="btn-lisa-outlined" [routerLink]="ctrl.route.registration">
+            Inscription
+          </a>
+        </div>
+      </div>
+        <div class="service-left py4" fxLayout="column" fxLayout.gt-sm="row">
+      
+          <div class="service-info service-info-right">
+            <h2 class="h2" id="service" >
+              TRANSACTIONS IMMOBILIÈRES :<span> DÉVELOPPEZ UNE ACTIVITÉ COMPLÉMENTAIRE</span>
+            </h2>
+            <p class="subtitle">
+              Grâce à notre outil de gestion et de suivi des transactions, les avocats peuvent réaliser des mandats de ventes immobilières avec leurs clients :
+            </p>
+            <h4>LISA :</h4>
+            <ul>
+              <li>permet le pilotage de la vente à distance par l'avocat</li>
+              <li>propose accompagement et formation (à la vente immobilière)</li>
+              <li>mène à la réussite par la maitrise de la décision finale qui revient à l'avocat et son client</li>
+            </ul>
+            <p class="p">
+              <span>LES AVOCATS ONT TOUT POUR REUSSIR</span>
+            </p>
+            <a class="btn-lisa-outlined" [routerLink]="ctrl.route.registration">
+              Inscription
+            </a>
+          </div>
+          <div class="img-right">
+            <img src="../../../assets/images/1274-droit-immobilier.jpg" 
+               layout="responsive" alt="droit immo">
+          </div>
+      </div>
+      <div  class="service-right py4" fxLayout="column" fxLayout.gt-sm="row">
+        <div class="img-left">
+          <img src="../../../assets/images/1274-avocat-chef.png" 
+             layout="responsive" alt="Avocat chef">
+        </div>
+    
+        <div class="service-info service-info-right">
+          <h2 class="h2" id="service" >
+            LISA, <span>VOTRE SOLUTION</span> DE PILOTAGE DE TRANSACTION
+          </h2>
+          <ul>
+            <li>Vous bénéficiez d'un <b>outil de gestion et de suivi de toutes les actions</b> , grâce à une plateforme de pilotage de la chaîne immobilière.</li>
+            <li>Vous êtes <b>informé à toutes les étapes, vous validez</b>, seul ou avec votre client, les différentes phases de la vente.</li>
+            <li>Vous êtes <b>responsable, pilote du projet</b> et <b>assisté par des professionnels</b>.</li>
+          </ul>
+          <p class="p">
+            <span>L'AVOCAT EST ICI LE CHEF D'ORCHESTRE</span>
+          </p>
+         
+          <a class="btn-lisa-outlined" [routerLink]="ctrl.route.registration">
+            Inscription
+          </a>
+        </div>
+      </div>
+     
 
-    <div class="">
-      <h2 id="debut" class="h3">LISA, LA SOLUTION DE <span style="color:#00adb5;">PILOTAGE DE VENTE DE BIENS
-          IMMOBILIERS</span> adaptée AUX <span style="color:#00adb5;">AVOCATS</span>, RESPECTUEUSE des <span
-          style="color:#00adb5;">règles et usages</span> de la profession</h2>
-      <p style="font-family: 'Montserrat', sans-serif; font-size: large;">
-
-        <br>
-        &bull; Les avocats sont les mieux placés pour vendre les biens immobiliers de leurs clients&nbsp;!
-        <br>
-        &bull; Ils connaissent les tenants et aboutissants de chaque lot et de chaque affaire.
-        <br>
-        &bull; Les avocats peuvent développer de nouvelles sources de revenus.
-        <br><br>
-        <span style="color:#00adb5; font-weight: bold;">UNE SOLUTION NOUVELLE CLÉS EN MAIN RIEN QUE POUR LES
-          AVOCATS&nbsp;!</span>
-        <br>
-      </p>
-      <br>
-      <a [routerLink]="ctrl.route.registration">
-        <div class="ampstart-btn ampstart-btn-secondary caps md-ml4">Inscription</div>
-      </a>
-    </div>
   </div>
-
-
+    
+  </section>
+ 
 </main>
 
 <app-footer></app-footer>
