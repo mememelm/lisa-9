@@ -17,21 +17,29 @@ html {
 }
 
 body {
-  font-family: Open Sans Condensed, sans-serif;
+  font-family: Open Sans Condensed, sans-serif !important;
   font-size: 16px;
 }
 
+span,
+a {
+  font-family: Open Sans Condensed, sans-serif !important;
+}
 
-h1.h1, h2.h2, h3.h3, h4.h4, h5.h5, h6.h6 {
-    line-height: normal;
-    letter-spacing: normal;
-     font-family: Open Sans Condensed, sans-serif;
-    text-transform: uppercase;
-    font-weight: 700;
-
+h1.h1,
+h2.h2,
+h3.h3,
+h4.h4,
+h5.h5,
+h6.h6 {
+  line-height: normal;
+  letter-spacing: normal;
+  font-family: Open Sans Condensed, sans-serif !important;
+  text-transform: uppercase;
+  font-weight: 700;
 }
 h1.h1 {
-  font-size: 2.25rem;/*36px*/
+  font-size: 2.25rem; /*36px*/
 }
 
 h2.h2 {
@@ -53,7 +61,7 @@ h6.h6 {
   font-size: 0.875rem; /*14px*/
 }
 h7.h7 {
-    font-size: 0.75rem; /*12px*/
+  font-size: 0.75rem; /*12px*/
 }
 p {
   font-weight: 400;
@@ -62,6 +70,7 @@ p {
 
 a {
   text-decoration: none !important;
+  letter-spacing: normal;
   &:focus {
     outline: none;
   }
@@ -85,34 +94,50 @@ ul {
   width: 100%;
   margin: 0 auto;
   padding: 4rem 2rem;
+  @media screen and (max-width: 575px) {
+    padding: 2rem 1rem;
+  }
 }
 .container-large {
   max-width: 1280px;
   width: 100%;
   margin: 0 auto;
   padding: 0 2rem;
+  @media screen and (max-width: 575px) {
+    padding: 0 1rem;
+  }
 }
 
-.btn-lisa-outlined{
-    background-color: #fff;
-    border: 1px solid #222;
-    color: #222;
-    font-size: .8rem;
-    font-weight: 700;
-    padding: .5rem 2rem;
-    transition: background-color .2s ease-in, color .2s ease-in;
-    color: #222;
-    text-transform: uppercase;
+.btn-lisa-outlined {
+  background-color: #fff;
+  border: 1px solid #222;
+  color: #222;
+  font-size: 0.8rem;
+  font-weight: 700;
+  padding: 0.5rem 2rem;
+  transition: background-color 0.2s ease-in, color 0.2s ease-in;
+  color: #222;
+  text-transform: uppercase;
 
-    &:hover{
-        background-color: #222;
-        color: #fff;
-    }
+  &:hover {
+    background-color: #222;
+    color: #fff;
+  }
 }
 .py4 {
-    padding-bottom: 2rem;
-    padding-top: 2rem
+  padding-bottom: 2rem;
+  padding-top: 2rem;
 }
-.pb4{
-    padding-bottom: 2rem;
+.pb4 {
+  padding-bottom: 2rem;
+}
+.scale-bg {
+  &:hover {
+    img {
+      transform: scale(1.05);
+    }
+  }
+  img {
+    transition: all 1s;
+  }
 }
