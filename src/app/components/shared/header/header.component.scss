@@ -32,6 +32,7 @@
       text-transform: uppercase;
       font-weight: 700;
       color: #000;
+      font-size: 1rem;
     }
   }
 }
@@ -47,11 +48,21 @@
 }
 .img-logo {
   width: 320px;
+  @media screen and (max-width: 600px) {
+    width: 200px;
+    margin-left: 10px;
+  }
+  @media screen and (max-width: 386px) {
+    width: 175px;
+  }
 }
 .icon-avocat-user {
   width: 40px;
   padding-left: 4px;
   border-left: 2px solid #a5a5a5;
+  @media screen and (max-width: 442px) {
+    width: 34px;
+  }
 }
 .link-inscrire {
   text-decoration: none;
@@ -62,5 +73,8 @@
     color: #222;
     padding-right: 10px;
     line-height: 1;
+    @media screen and (max-width: 442px) {
+      display: none;
+    }
   }
 }
