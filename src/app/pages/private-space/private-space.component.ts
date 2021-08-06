@@ -1,5 +1,3 @@
-import { Role } from './../../constants/models/role';
-import { UserAcl } from './../../constants/models/user-acl';
 import { ControllerService } from './../../services/controller.service';
 import { Component, OnInit } from '@angular/core';
 
@@ -9,9 +7,6 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./private-space.component.scss']
 })
 export class PrivateSpaceComponent implements OnInit {
-
-  user: UserAcl
-  role: Role
 
   d01 = true
   d02 = false
@@ -27,10 +22,7 @@ export class PrivateSpaceComponent implements OnInit {
 
   constructor(public ctrl: ControllerService) { }
 
-  ngOnInit(): void {
-    this.user = this.ctrl.storage.user()
-    this.role = this.ctrl.storage.role()
-  }
+  ngOnInit(): void { }
 
   toogleView(element: string) {
     switch (element) {

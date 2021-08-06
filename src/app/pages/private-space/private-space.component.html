@@ -1,17 +1,4 @@
-<ul class="nav justify-content-end">
-  <li class="nav-item">
-    <a class="nav-link disabled" href="#">
-      <span *ngIf="role">
-        <i class="material-icons">account_balance_wallet</i>
-        {{role.abbreviation}}
-      </span>
-      <span>
-        <i class="material-icons">person</i>
-        {{user.firstname | titlecase}} {{user.lastname | titlecase}}
-      </span>
-    </a>
-  </li>
-</ul>
+<app-header-space></app-header-space>
 
 <div class="container">
   <div class="private-header">
@@ -28,6 +15,7 @@
 
   <div class="d-flex">
     <div class="ampstart-btn ampstart-btn-secondary md-m20 container-navigate-mandats"
+      [routerLink]="ctrl.route.mandatUndersigned"
       title="Accès privé à la plateforme 1GER pour la gestion et le suivi de vos dossiers. La plateforme vous permet de lancer la commercialisation dun bien immobilier très facilement.">
       Plateforme de gestion de des mandats
     </div>

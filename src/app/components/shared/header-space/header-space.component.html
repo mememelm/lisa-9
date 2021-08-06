@@ -1,0 +1,20 @@
+<ul class="nav justify-content-end">
+  <li class="nav-item">
+    <a class="nav-link disabled" href="#">
+      <span *ngIf="role">
+        <i class="material-icons">account_balance_wallet</i>
+        {{role.abbreviation}}
+      </span>
+      <span>
+        <i class="material-icons">person</i>
+        {{user.firstname | titlecase}} {{user.lastname | titlecase}}
+      </span>
+      <span>
+        <a (click)="ctrl.logOut()">
+          <i class="material-icons">power_settings_new</i>
+          Déconnexion
+        </a>
+      </span>
+    </a>
+  </li>
+</ul>

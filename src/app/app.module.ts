@@ -18,6 +18,8 @@ import { DataTablesModule } from 'angular-datatables';
 import { NgxIntlTelInputModule } from 'ngx-intl-tel-input';
 import { MatToolbarModule } from '@angular/material/toolbar'
 import { MatCheckboxModule } from '@angular/material/checkbox'
+import { MatInputModule } from '@angular/material/input'
+import { MatFormFieldModule } from '@angular/material/form-field'
 
 import { HeaderRegistrationComponent } from './components/shared/header-registration/header-registration.component';
 import { HeaderComponent } from './components/shared/header/header.component';
@@ -35,6 +37,8 @@ import { ModalDeleteComponent } from './components/shared/modal-delete/modal-del
 import { PrivateDocumentationComponent } from './components/private-documentation/private-documentation.component';
 import { PrivateAdviceComponent } from './components/private-advice/private-advice.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { HeaderSpaceComponent } from './components/shared/header-space/header-space.component';
+import { MandateUndersignedComponent } from './pages/mandate-undersigned/mandate-undersigned.component';
 
 @NgModule({
   declarations: [
@@ -56,6 +60,8 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
     ModalDeleteComponent,
     PrivateDocumentationComponent,
     PrivateAdviceComponent,
+    HeaderSpaceComponent,
+    MandateUndersignedComponent,
   ],
   imports: [
     BrowserModule,
@@ -73,6 +79,8 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
     DataTablesModule,
     MatCheckboxModule,
     FontAwesomeModule,
+    MatInputModule,
+    MatFormFieldModule
   ],
   providers: [
     { provide: HTTP_INTERCEPTORS, useClass: EnvInterceptor, multi: true },

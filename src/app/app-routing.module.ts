@@ -1,3 +1,4 @@
+import { MandateUndersignedComponent } from './pages/mandate-undersigned/mandate-undersigned.component';
 import { UserListComponent } from './pages/admin/user-list/user-list.component';
 import { PrivateSpaceComponent } from './pages/private-space/private-space.component';
 import { UserRoleComponent } from './pages/admin/user-role/user-role.component';
@@ -23,6 +24,7 @@ const routes: Routes = [
   { path: 'espace-prive', component: PrivateSpaceComponent },
   { path: 'admin-user-role', component: UserRoleComponent },
   { path: 'admin-user-list', component: UserListComponent },
+  { path: 'mandat-soussigne', component: MandateUndersignedComponent }
 ];
 
 @NgModule({
