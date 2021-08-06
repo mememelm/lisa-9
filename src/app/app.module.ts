@@ -20,6 +20,7 @@ import { MatToolbarModule } from '@angular/material/toolbar'
 import { MatCheckboxModule } from '@angular/material/checkbox'
 import { MatInputModule } from '@angular/material/input'
 import { MatFormFieldModule } from '@angular/material/form-field'
+import {MatRadioModule} from '@angular/material/radio'
 
 import { HeaderRegistrationComponent } from './components/shared/header-registration/header-registration.component';
 import { HeaderComponent } from './components/shared/header/header.component';
@@ -39,6 +40,10 @@ import { PrivateAdviceComponent } from './components/private-advice/private-advi
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { HeaderSpaceComponent } from './components/shared/header-space/header-space.component';
 import { MandateUndersignedComponent } from './pages/mandate-undersigned/mandate-undersigned.component';
+import { PersonInformationComponent } from './components/undersigned/person-information/person-information.component';
+import { SocietyInformationComponent } from './components/undersigned/society-information/society-information.component';
+import { LawyerInformationComponent } from './components/undersigned/lawyer-information/lawyer-information.component';
+import { SocietyLawyerInformationComponent } from './components/undersigned/society-lawyer-information/society-lawyer-information.component';
 
 @NgModule({
   declarations: [
@@ -62,6 +67,10 @@ import { MandateUndersignedComponent } from './pages/mandate-undersigned/mandate
     PrivateAdviceComponent,
     HeaderSpaceComponent,
     MandateUndersignedComponent,
+    PersonInformationComponent,
+    SocietyInformationComponent,
+    LawyerInformationComponent,
+    SocietyLawyerInformationComponent,
   ],
   imports: [
     BrowserModule,
@@ -80,7 +89,8 @@ import { MandateUndersignedComponent } from './pages/mandate-undersigned/mandate
     MatCheckboxModule,
     FontAwesomeModule,
     MatInputModule,
-    MatFormFieldModule
+    MatFormFieldModule,
+    MatRadioModule
   ],
   providers: [
     { provide: HTTP_INTERCEPTORS, useClass: EnvInterceptor, multi: true },

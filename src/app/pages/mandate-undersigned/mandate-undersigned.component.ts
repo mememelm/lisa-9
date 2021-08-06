@@ -1,3 +1,5 @@
+import { FormGroup } from '@angular/forms';
+import { ControllerService } from './../../services/controller.service';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -7,9 +9,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MandateUndersignedComponent implements OnInit {
 
-  constructor() { }
+  mandateForm: FormGroup
+
+  constructor(public ctrl: ControllerService) { }
 
   ngOnInit(): void {
-  }
 
+  }
 }
