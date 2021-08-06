@@ -19,19 +19,19 @@
     </mat-toolbar-row>
     <mat-toolbar-row fxLayout="row" fxLayoutAlign="center center" fxShow="true" fxHide.lt-md="true">
       <!-- The following menu items will be hidden on both SM and XS screen sizes -->
-      <a class="nav-link-item" mat-button [routerLink]="ctrl.route.home">ACCUEIL</a>
-      <a class="nav-link-item" mat-button [routerLink]="ctrl.route.story">NOTRE HISTOIRE</a>
-      <a class="nav-link-item" mat-button [routerLink]="ctrl.route.solutionLawyer">LA SOLUTION AVOCAT</a>
-      <a class="nav-link-item" mat-button [routerLink]="ctrl.route.actuality">ACTUALITÉS</a>
-      <a class="nav-link-item" mat-button [routerLink]="ctrl.route.registration">INSCRIPTION</a>
-      <a class="nav-link-item" mat-button [routerLink]="ctrl.route.connexion">CONNEXION</a>
+      <a class="nav-link-item" [routerLink]="ctrl.route.home">ACCUEIL</a>
+      <a class="nav-link-item" [routerLink]="ctrl.route.story">NOTRE HISTOIRE</a>
+      <a class="nav-link-item" [routerLink]="ctrl.route.solutionLawyer">LA SOLUTION AVOCAT</a>
+      <a class="nav-link-item" [routerLink]="ctrl.route.actuality">ACTUALITÉS</a>
+      <a class="nav-link-item" [routerLink]="ctrl.route.registration">INSCRIPTION</a>
+      <a class="nav-link-item" [routerLink]="ctrl.route.connexion">CONNEXION</a>
 
     </mat-toolbar-row>
   </mat-toolbar>
 
   <mat-sidenav-container class="menu-responsive">
     <mat-sidenav #sidenav class="container-menu-responsive">
-      <mat-nav-list>
+      <mat-nav-list fxLayout="column" fxLayoutGap fxLayoutAlign="center center">
         <a mat-button [routerLink]="ctrl.route.home" mat-list-item>
           ACCUEIL
         </a>
@@ -50,10 +50,10 @@
         <a mat-button [routerLink]="ctrl.route.connexion" mat-list-item>
           CONNEXION
         </a>
-        <a (click)="sidenav.toggle()" mat-list-item>
-          <mat-icon>close</mat-icon>
-        </a>
       </mat-nav-list>
+      <a (click)="sidenav.toggle()" class="close position-absolute">
+        <mat-icon>close</mat-icon>
+      </a>
     </mat-sidenav>
 
   </mat-sidenav-container>
