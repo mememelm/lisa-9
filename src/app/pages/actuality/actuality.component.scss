@@ -60,7 +60,6 @@ main {
         }
         .content-service{
             article{
-                font-family: 'Open Sans', sans-serif;;
                 padding-right: 7rem;
                 font-size: .94rem;
                 @media screen and (max-width: 960px) {
@@ -91,13 +90,13 @@ main {
                 }
                
                 blockquote {
-                    font-size: 2.2rem;
+                    font-size: 2rem;
                     margin: 1.5rem 0 1rem;
                     line-height: 1.2;
                     border-left: none;
                     padding-left: 0;
                     @media screen and (max-width: 960px) {
-                        font-size: 2rem;
+                        font-size: 1.875rem;
                     }
                     @media screen and (max-width: 575px) {
                         font-size: 1.50rem;
@@ -110,6 +109,7 @@ main {
              
                 .blockquote-blue {
                     color: #00adb5;
+                      font-size: 1.875rem;
                 }
                 .blockquote-h1{
                     font-size: 3.25rem;
