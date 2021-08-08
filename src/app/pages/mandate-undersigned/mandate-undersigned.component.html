@@ -1,10 +1,10 @@
 <app-header-space></app-header-space>
 
 <div class="container">
-  <form action="">
+  <form [formGroup]="mandateForm">
     <h3>Réf Dossier :
       <mat-form-field>
-        <input matInput type="text">
+        <input matInput type="text" formControlName="ref">
       </mat-form-field>
     </h3>
     <h1 class="text-center">
@@ -13,6 +13,6 @@
 
     <h2><b>ENTRE LES SOUSSIGNES</b></h2>
 
-    <app-person-information></app-person-information>
+    <app-person-information [parentFormGroup]="mandateForm" [display]="true"></app-person-information>
   </form>
 </div>

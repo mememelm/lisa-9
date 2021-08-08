@@ -8,6 +8,7 @@ import { Component, Input, OnInit } from '@angular/core';
 })
 export class PersonInformationComponent implements OnInit {
 
+  @Input() display = true
   @Input() parentFormGroup: FormGroup
 
   personGender: Array<any> = [

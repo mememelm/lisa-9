@@ -20,7 +20,8 @@ import { MatToolbarModule } from '@angular/material/toolbar'
 import { MatCheckboxModule } from '@angular/material/checkbox'
 import { MatInputModule } from '@angular/material/input'
 import { MatFormFieldModule } from '@angular/material/form-field'
-import {MatRadioModule} from '@angular/material/radio'
+import { MatRadioModule } from '@angular/material/radio'
+import { MatSelectModule } from '@angular/material/select'
 
 import { HeaderRegistrationComponent } from './components/shared/header-registration/header-registration.component';
 import { HeaderComponent } from './components/shared/header/header.component';
@@ -90,7 +91,8 @@ import { SocietyLawyerInformationComponent } from './components/undersigned/soci
     FontAwesomeModule,
     MatInputModule,
     MatFormFieldModule,
-    MatRadioModule
+    MatRadioModule,
+    MatSelectModule
   ],
   providers: [
     { provide: HTTP_INTERCEPTORS, useClass: EnvInterceptor, multi: true },

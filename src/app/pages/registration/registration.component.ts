@@ -31,6 +31,7 @@ export class RegistrationComponent implements OnInit {
         this.userForm.value['match_password'] !== this.userForm.value['password']
           ? this.errorPassword = true : this.errorPassword = false
       }
+      this.userForm.value['phone_number'] = this.userForm.value['phone_number']?.internationalNumber
     })
   }
 
