@@ -1,6 +1,11 @@
-<mat-toolbar>
-  <a class="img-logo"><img src=""></a>
-  <a class="title" [routerLink]="ctrl.route.home">ACCUEIL</a>
-  <a class="title" [routerLink]="ctrl.route.connexion" *ngIf="displayConnexion">CONNEXION</a>
-  <a class="title" [routerLink]="ctrl.route.registration" *ngIf="displayRegistration">INSCRIPTION</a>
-</mat-toolbar>
+
+  <mat-toolbar >
+    <div fxLayout="row" fxLayoutAlign="space-between center" class="container-large">
+      <a [routerLink]="ctrl.route.home" ><img class="img-logo" src="../../../../assets/images/logo-lisa-footer.svg"></a>
+      <div fxLayout="row" fxLayoutAlign="center center">
+        <a class="title" [routerLink]="ctrl.route.home">ACCUEIL</a>
+        <a class="title" [routerLink]="ctrl.route.connexion" *ngIf="displayConnexion">CONNEXION</a>
+        <a class="title" [routerLink]="ctrl.route.registration" *ngIf="displayRegistration">INSCRIPTION</a>
+      </div>
+    </div>
+  </mat-toolbar>
