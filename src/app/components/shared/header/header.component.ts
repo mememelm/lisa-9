@@ -7,10 +7,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./header.component.scss']
 })
 export class HeaderComponent implements OnInit {
+  constructor(public ctrl: ControllerService) {}
 
-  constructor(public ctrl: ControllerService) { }
-
-  ngOnInit(): void {
-  }
-
+  ngOnInit(): void {}
 }

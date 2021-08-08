@@ -1,9 +1,60 @@
-<mat-toolbar>
-  <a class="img-logo"><img src=""></a>
-  <a class="title" [routerLink]="ctrl.route.home">ACCUEIL</a>
-  <a class="title" [routerLink]="ctrl.route.story">NOTRE HISTOIRE</a>
-  <a class="title" [routerLink]="ctrl.route.solutionLawyer">LA SOLUTION AVOCAT</a>
-  <a class="title" [routerLink]="ctrl.route.actuality">ACTUALITES</a>
-  <a class="title" [routerLink]="ctrl.route.registration">INSCRIPTION</a>
-  <a class="title" [routerLink]="ctrl.route.connexion">CONNEXION</a>
-</mat-toolbar>
+<div class="content-header">
+  <mat-toolbar>
+    <mat-toolbar-row fxLayout="row" fxLayoutAlign="space-between center" class="top-header">
+      <div>
+        <button mat-icon-button (click)="sidenav.toggle()" fxShow="true" fxHide.gt-sm>
+          <mat-icon>menu</mat-icon>
+        </button>
+        <a [routerLink]="ctrl.route.home">
+          <img class="img-logo" src="../../../../assets/images/logo-lisa.svg" alt="logo">
+        </a>
+      </div>
+      <div>
+        <a fxLayout="row" fxLayoutAlign="center start" class="link-inscrire" [routerLink]="ctrl.route.registration">
+          <span>INSCRIVEZ-VOUS</span> <img class="icon-avocat-user" src="../../../../assets/images/icon-avocat-user.png"
+            alt=""></a>
+
+      </div>
+
+    </mat-toolbar-row>
+    <mat-toolbar-row fxLayout="row" fxLayoutAlign="center center" fxShow="true" fxHide.lt-md="true">
+      <!-- The following menu items will be hidden on both SM and XS screen sizes -->
+      <a class="nav-link-item" [routerLink]="ctrl.route.home">ACCUEIL</a>
+      <a class="nav-link-item" [routerLink]="ctrl.route.story">NOTRE HISTOIRE</a>
+      <a class="nav-link-item" [routerLink]="ctrl.route.solutionLawyer">LA SOLUTION AVOCAT</a>
+      <a class="nav-link-item" [routerLink]="ctrl.route.actuality">ACTUALITÉS</a>
+      <a class="nav-link-item" [routerLink]="ctrl.route.registration">INSCRIPTION</a>
+      <a class="nav-link-item" [routerLink]="ctrl.route.connexion">CONNEXION</a>
+
+    </mat-toolbar-row>
+  </mat-toolbar>
+
+  <mat-sidenav-container class="menu-responsive">
+    <mat-sidenav #sidenav class="container-menu-responsive">
+      <mat-nav-list fxLayout="column" fxLayoutGap fxLayoutAlign="center center">
+        <a mat-button [routerLink]="ctrl.route.home" mat-list-item>
+          ACCUEIL
+        </a>
+        <a mat-button [routerLink]="ctrl.route.story" mat-list-item>
+          NOTRE HISTOIRE
+        </a>
+        <a mat-button [routerLink]="ctrl.route.solutionLawyer" mat-list-item>
+          LA SOLUTION AVOCAT
+        </a>
+        <a mat-button [routerLink]="ctrl.route.actuality" mat-list-item>
+          ACTUALITÉS
+        </a>
+        <a mat-button [routerLink]="ctrl.route.registration" mat-list-item>
+          INSCRIPTION
+        </a>
+        <a mat-button [routerLink]="ctrl.route.connexion" mat-list-item>
+          CONNEXION
+        </a>
+      </mat-nav-list>
+      <a (click)="sidenav.toggle()" class="close position-absolute">
+        <mat-icon>close</mat-icon>
+      </a>
+    </mat-sidenav>
+
+  </mat-sidenav-container>
+</div>
