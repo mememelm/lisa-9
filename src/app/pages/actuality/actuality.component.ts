@@ -1,3 +1,4 @@
+import { ControllerService } from './../../services/controller.service';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -7,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ActualityComponent implements OnInit {
 
-  constructor() { }
+  constructor(public ctrl: ControllerService) {}
 
   ngOnInit(): void {
   }
