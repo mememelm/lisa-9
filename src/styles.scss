@@ -13,13 +13,6 @@ $LISA-theme: mat-light-theme($LISA-primary, $LISA-accent, $LISA-warn);
 
 @import "./sass/variables.scss";
 
-html,
-body {
-  height: 100%;
-  margin: 0;
-  font-family: Montserrat, sans-serif !important;
-}
-
 .cursor-pt {
   cursor: pointer;
 }
@@ -30,16 +23,8 @@ body {
 
 .main-container {
   position: relative !important;
-  width: 100%;
-  min-height: calc(100vh - 64px);
-
-  @media (max-width: 475px) {
-    min-height: calc(100vh - 56px);
-    padding-top: 56px;
-  }
 
   .page-container {
-    margin-top: 70px !important;
     position: relative;
 
     h1 {
