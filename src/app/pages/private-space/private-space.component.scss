@@ -6,87 +6,152 @@ main {
   .content-banner-header {
     position: relative;
     height: 100%;
-    max-height: 650px;
+    height: 526px;
     overflow: hidden;
-    @media screen and (max-width: 720px) {
-      height: 400px;
+    @media screen and (max-width: 600px) {
+      height: 700px;
     }
-    img {
+    img.img-bg{
       width: 100%;
       object-fit: cover;
-      height: 100%;
-      max-height: 650px;
+      height: 526px;
+      @media screen and (max-width: 600px) {
+        height: 700px;
+      }
+      @media screen and (max-width: 442px) {
+        height: 800px;
+      }
     }
     .content-text-banner-header {
       width: 100%;
-      top: 26%;
+      top: 10%;
       margin: auto;
-      @media screen and (max-width: 442px) {
-        top: 16%;
+      max-width: 1300px;
+      padding: 0 12px;
+      left: 0;
+      right: 0;
+      @media screen and (max-width: 500px) {
+        top: 6%;
       }
-      .text-banner {
-        padding: 24px;
+      h3 {
+        font-size: 1.25rem;
+        font-weight: 700;
+        color: #000000;
+        margin-bottom: 0;
+        text-transform: initial;
+        line-height: 1;
+        @media screen and (max-width: 442px) {
+          font-size: 1.125rem;
+        }
+      }
+      .private-header {
+        padding: 0 32px 30px;
+        background: white;
+        opacity: 0.8;
+        width: 100%;
+        max-width: 640px;
+        margin-bottom: 36px;
         @media screen and (max-width: 610px) {
           padding: 16px;
         }
-        h1 {
-          color: #fff;
-          line-height: 44px;
-          margin-bottom: 24px;
-          font-size: 3.5rem;
-          font-weight: 700;
-          line-height: 1;
-          max-width: 500px;
-          @media screen and (max-width: 960px) {
-            font-size: 3rem;
+        .logo-lisa-banner{
+          width: 100%;
+          max-width: 330px;
+          margin: 24px 0 12px;
+          @media screen and (max-width: 600px) {
+            margin: 0;
           }
+        }
+        h1.h1 {
+          color: #000;
+          line-height: 32px;
+          margin-bottom: 8px;
+          font-size: 2rem;
+          font-weight: 700;
+          text-transform: initial;
+
           @media screen and (max-width: 575px) {
-            font-size: 2.75rem;
+            font-size: 1.75rem;
+          }
+        }
+        p.p-subtitle {
+          font-size: 1.25rem;
+          font-weight: 700;
+          color: #000000
+        } 
+      }
+      .container-clip-path {
+        display: flex;
+        @media screen and (max-width: 600px) {
+          flex-wrap: wrap;
+        }
+        .container-navigate-mandats {
+          padding: 2rem 2rem .5rem;
+          height: 150px;
+          width: 185px;
+          font-size: large;
+          background: white;
+          opacity: 0.9;
+          clip-path: polygon(0% 0%, 99% 0%, 99% 100%, 18% 100%, 0% 82%);
+          &:hover {
+            cursor: pointer;
+          }
+          span {
+            color: red;
+            font-size: small;
+            font-weight: 700;
+            line-height: 1;
+          }
+          @media screen and (max-width: 600px) {
+            margin: 0 20px 12px 0;
+          }
+          @media screen and (max-width: 442px) {
+            margin: 0 12px 12px 0;
+            padding: 1rem 1rem 0.5rem;
+            height: 138px;
+            width: 156px;
+          }
+          @media screen and (max-width: 360px) {
+            padding: 1rem .75rem 0.5rem;
+            height: 128px;
+            width: 130px;
+          }
+        }
+        
+        .container-navigate {
+          padding: 2rem 2rem .5rem;
+          height: 150px;
+          width: 185px;
+          font-size: large;
+          clip-path: polygon(0% 0%, 99% 0%, 99% 100%, 18% 100%, 0% 82%);
+          &:hover {
+            cursor: pointer;
+          }
+          @media screen and (max-width: 600px) {
+            margin: 0 20px 12px 0;
+          }
+          @media screen and (max-width: 442px) {
+            margin: 0 12px 12px 0;
+            padding: 1rem 1rem 0.5rem;
+            height: 138px;
+            width: 156px;
+          }
+          @media screen and (max-width: 360px) {
+            padding: 1rem .75rem 0.5rem;
+            height: 128px;
+            width: 130px;
           }
         }
       }
 
-      a {
-        background-color: #fff;
-        border: none;
-        color: #222;
-        font-size: 0.94rem;
-        font-weight: 700;
-        padding: 0.5rem 2rem;
-        transition: background-color 0.2s ease-in, color 0.2s ease-in;
-        text-transform: uppercase;
-        color: #222;
-        &:hover {
-          background-color: #222;
-          color: #fff;
-        }
-      }
     }
   }
 }
 
-.private-header {
-  background: white;
-  opacity: 0.8;
-  padding: 35px;
-  width: 50%;
-}
 
-.container-navigate-mandats {
-  height: 150px;
-  width: 185px;
-  font-size: large;
-  background: white;
-  opacity: 0.9;
-  clip-path: polygon(0% 0%, 99% 0%, 99% 100%, 18% 100%, 0% 82%);
-  color: orangered;
+.bg-fiche-conseil{
+background: #96e7ea;
 }
-
-.container-navigate {
-  height: 150px;
-  width: 185px;
-  font-size: large;
-  background: #a0afc1;
-  clip-path: polygon(0% 0%, 99% 0%, 99% 100%, 18% 100%, 0% 82%);
-  padding-left: 15px;
+.bg-doc {
+background: #51eff7;
 }

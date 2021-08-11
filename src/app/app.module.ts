@@ -28,6 +28,7 @@ import { MatSelectModule } from '@angular/material/select';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatIconModule } from '@angular/material/icon';
 import { MatButtonModule } from '@angular/material/button';
+import {MatTooltipModule} from '@angular/material/tooltip';
 
 import { HeaderRegistrationComponent } from './components/shared/header-registration/header-registration.component';
 import { HeaderComponent } from './components/shared/header/header.component';
@@ -109,6 +110,7 @@ import { SocietyLawyerInformationComponent } from './components/undersigned/soci
     MatSidenavModule,
     MatIconModule,
     MatButtonModule,
+    MatTooltipModule,
     FontAwesomeModule
   ],
   providers: [

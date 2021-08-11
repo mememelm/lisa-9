@@ -1,81 +1,83 @@
 <app-header-space></app-header-space>
 
-<main class="main">
+<main class="main"> 
   <section id="bannerHeader">
     <div class="content-banner-header scale-bg">
-      <img src="../../../assets/images/1274-prive-head.jpg" alt="">
+      <img class="img-bg" src="../../../assets/images/1274-prive-head.jpg" alt="">
       <div class="md-mx-auto position-absolute content-text-banner-header">
         <div class="private-header">
           <div class="text-decoration-none inline-block mx-auto ampstart-headerbar-home-link mb0 md-mb0">
-            <img src="../../../assets/images/logo-lisa.svg" width="330" height="97">
+            <img class='logo-lisa-banner' src="../../../assets/images/logo-lisa.svg" width="330" height="97">
           </div>
-          <br>
-          <h3 class="h4"><b> Bienvenue ... sur votre espace privé. </b></h3>
-          <h3 class="h5">Ici vous trouverez :
+          <h1 class="h1">Bienvenue ... sur votre espace privé.</h1>
+          <p class="p-subtitle">Ici vous trouverez :
             des documents, des formations, des conseils, des outils, des informations pour réaliser au mieux vos ventes
             immobilières.
-          </h3>
+          </p>
         </div>
-        <div class="d-flex">
-          <div class="ampstart-btn ampstart-btn-secondary md-m20 container-navigate-mandats"
-            [routerLink]="ctrl.route.mandatUndersigned"
-            title="Accès privé à la plateforme 1GER pour la gestion et le suivi de vos dossiers. La plateforme vous permet de lancer la commercialisation dun bien immobilier très facilement.">
-            Plateforme de gestion des mandats
-          </div>
-          <div class="ampstart-btn ampstart-btn-secondary md-m20 container-navigate"
+        <div class="container-clip-path">
+          <a [routerLink]="ctrl.route.mandatUndersigned" 
+          matTooltip="Accès privé à la plateforme 1GER pour la gestion et le suivi de vos dossiers. La plateforme vous permet de lancer la commercialisation dun bien immobilier très facilement." 
+          matTooltipPosition="right">
+            <div class="container-navigate-mandats">
+              <h3 class="h3">Plateforme de gestion des mandats</h3>
+              <span>Ouverture <br> septembre 2021</span>
+            </div>
+          </a>
+         
+          <a class="container-navigate bg-doc mx24px"
             (click)="ctrl.scrollElement(documentation)">
-            Documentation
-          </div>
-          <div class="ampstart-btn ampstart-btn-secondary md-m20 container-navigate"
+            <h3 class="h3">Documentation</h3>
+          </a >
+          <a class="container-navigate bg-fiche-conseil"
             (click)="ctrl.scrollElement(advice)">
-            Fiches Conseils
-          </div>
+            <h3 class="h3"> Fiches Conseils</h3>
+          </a>
         </div>
       </div>
     </div>
   </section>
 
-
-
-
   <div class="mt-4">
-    <section #documentation>
-      <div class="row">
-        <div class="col-md-4">
-          Documentation
-          <hr>
-          <ul>
-            <li (click)="toogleView('d01')">D01 - Mandat</li>
-            <li (click)="toogleView('d02')">D02 - Déclaration d’activité</li>
-            <li (click)="toogleView('d03')">D03 - Loi ALUR</li>
-            <li (click)="toogleView('d04')">D04 - Guide pratique</li>
-          </ul>
+    <div class="container-base">
+      <section #documentation>
+        <div class="row">
+          <div class="col-md-4">
+            Documentation
+            <hr>
+            <ul>
+              <li (click)="toogleView('d01')">D01 - Mandat</li>
+              <li (click)="toogleView('d02')">D02 - Déclaration d’activité</li>
+              <li (click)="toogleView('d03')">D03 - Loi ALUR</li>
+              <li (click)="toogleView('d04')">D04 - Guide pratique</li>
+            </ul>
+          </div>
+          <div class="col-md-8">
+            <app-private-documentation [d01]="d01" [d02]="d02" [d03]="d03" [d04]="d04"></app-private-documentation>
+          </div>
         </div>
-        <div class="col-md-8">
-          <app-private-documentation [d01]="d01" [d02]="d02" [d03]="d03" [d04]="d04"></app-private-documentation>
+      </section>
+      <section #advice>
+        <div class="row">
+          <div class="col-md-4">
+            Fiches Conseils
+            <hr>
+            <ul>
+              <li (click)="toogleView('c01')">C01 - Comment convaincre ?</li>
+              <li (click)="toogleView('c02')">C02 - Comment détecter ?</li>
+              <li (click)="toogleView('c03')">C03 - Les points forts de LISA</li>
+              <li (click)="toogleView('c04')">C04 - Pourquoi développer mon activité ?</li>
+              <li (click)="toogleView('c05')">C05 - Les étapes d'une vente</li>
+              <li (click)="toogleView('c06')">C06 - Les diagnostics immobiliers</li>
+            </ul>
+          </div>
+          <div class="col-md-8">
+            <app-private-advice [c01]="c01" [c02]="c02" [c03]="c03" [c04]="c04" [c05]="c05" [c06]="c06">
+            </app-private-advice>
+          </div>
         </div>
-      </div>
-    </section>
-    <section #advice>
-      <div class="row">
-        <div class="col-md-4">
-          Fiches Conseils
-          <hr>
-          <ul>
-            <li (click)="toogleView('c01')">C01 - Comment convaincre ?</li>
-            <li (click)="toogleView('c02')">C02 - Comment détecter ?</li>
-            <li (click)="toogleView('c03')">C03 - Les points forts de LISA</li>
-            <li (click)="toogleView('c04')">C04 - Pourquoi développer mon activité ?</li>
-            <li (click)="toogleView('c05')">C05 - Les étapes d'une vente</li>
-            <li (click)="toogleView('c06')">C06 - Les diagnostics immobiliers</li>
-          </ul>
-        </div>
-        <div class="col-md-8">
-          <app-private-advice [c01]="c01" [c02]="c02" [c03]="c03" [c04]="c04" [c05]="c05" [c06]="c06">
-          </app-private-advice>
-        </div>
-      </div>
-    </section>
+      </section>
+    </div>
   </div>
 </main>
 

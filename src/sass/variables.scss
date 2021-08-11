@@ -148,6 +148,9 @@ ul {
   margin-top: 2rem;
   margin-bottom: 2rem
 }
+.mx24px {
+  margin: 0 24px;
+}
 .my5 {
   margin-top: 2.5rem;
   margin-bottom: 2.5rem
@@ -176,11 +179,11 @@ ul {
 
 .scale-bg {
   &:hover {
-    img {
+    img.img-bg {
       transform: scale(1.05);
     }
   }
-  img {
+  img.img-bg {
     transition: all 1s;
   }
 }

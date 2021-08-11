@@ -15,6 +15,16 @@
   .mr-2 {
     margin-right: 12px;
   }
+  .container-large {
+    display: flex;
+    justify-content: space-between;
+    @media screen and (max-width: 960px) {
+      flex-direction: column;
+    }
+    .content-list-rs {
+      display: flex;
+    }
+  }
 }
 
 @media screen and (max-width: 960px) {
