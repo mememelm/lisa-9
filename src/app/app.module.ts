@@ -49,6 +49,8 @@ import { PersonInformationComponent } from './components/undersigned/person-info
 import { SocietyInformationComponent } from './components/undersigned/society-information/society-information.component';
 import { LawyerInformationComponent } from './components/undersigned/lawyer-information/lawyer-information.component';
 import { SocietyLawyerInformationComponent } from './components/undersigned/society-lawyer-information/society-lawyer-information.component';
+import { AddressInputComponent } from './components/address-input/address-input.component';
+import { ContactInputComponent } from './components/contact-input/contact-input.component';
 
 @NgModule({
   declarations: [
@@ -76,6 +78,8 @@ import { SocietyLawyerInformationComponent } from './components/undersigned/soci
     SocietyInformationComponent,
     LawyerInformationComponent,
     SocietyLawyerInformationComponent,
+    AddressInputComponent,
+    ContactInputComponent,
   ],
   imports: [
     BrowserModule,

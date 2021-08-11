@@ -1,0 +1,12 @@
+<form [formGroup]="parentFormGroup">
+  <p>Tel portable :
+    <app-phone-input [parentFormGroup]="parentFormGroup" controlName="personnal_phone"></app-phone-input>
+    Tel fix :
+    <app-phone-input [parentFormGroup]="parentFormGroup" controlName="home_phone"></app-phone-input>
+  </p>
+  <p>Adresse email :
+    <mat-form-field>
+      <input matInput type="text" formControlName="email">
+    </mat-form-field>
+  </p>
+</form>

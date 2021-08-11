@@ -1,1 +1,55 @@
-<p>society-information works!</p>
+<div [formGroup]="parentFormGroup" *ngIf="display">
+  <p>
+    La société :
+    <mat-form-field>
+      <input matInput type="text" formControlName="society_name">
+    </mat-form-field>
+  </p>
+  <p>
+    Forme juridique :
+    <mat-form-field>
+      <input matInput type="text" formControlName="legal_status">
+    </mat-form-field>
+  </p>
+  <p>
+    Au capital de :
+    <mat-form-field>
+      <input matInput type="text" formControlName="society_capital">
+    </mat-form-field> €
+  </p>
+  <p>
+    RCS de :
+    <mat-form-field>
+      <input matInput type="text" formControlName="society_rcs">
+    </mat-form-field>
+    N° :
+    <mat-form-field>
+      <input matInput type="text" formControlName="society_id_number">
+    </mat-form-field>
+  </p>
+
+  <h3>Siège social :</h3>
+
+  <app-address-input [parentFormGroup]="parentFormGroup"></app-address-input>
+
+  <h3>Représentée par :</h3>
+
+  <p>
+    Nom :
+    <mat-form-field>
+      <input matInput type="text" formControlName="last_name">
+    </mat-form-field>
+    Prénom :
+    <mat-form-field>
+      <input matInput type="text" formControlName="first_name">
+    </mat-form-field>
+  </p>
+  <p>
+    En tant que :
+    <mat-form-field>
+      <input matInput type="text" formControlName="person_representing">
+    </mat-form-field>
+  </p>
+
+  <app-contact-input [parentFormGroup]="parentFormGroup"></app-contact-input>
+</div>

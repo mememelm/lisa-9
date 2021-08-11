@@ -17,25 +17,31 @@ export class MandateUndersignedComponent implements OnInit {
     this.mandateForm = this.ctrl.fb.group({
       ref: [''],
       type_mandate: [''],
-      cli1_gender: [''],
-      cli1_first_name: [''],
-      cli1_last_name: [''],
-      cli1_date_birth: [''],
-      cli1_place_birth: [''],
-      cli1_department: [''],
-      cli1_nationality: [''],
-      cli1_email: [''],
-      cli1_address: [''],
-      cli1_city: [''],
-      cli1_postal_code: [''],
-      cli1_country: [''],
-      cli1_personnal_phone: [''],
-      cli1_home_phone: [''],
+      gender: [''],
+      first_name: [''],
+      last_name: [''],
+      date_birth: [''],
+      place_birth: [''],
+      department: [''],
+      nationality: [''],
+      email: [''],
+      address: [''],
+      city: [''],
+      postal_code: [''],
+      country: [''],
+      personnal_phone: [''],
+      home_phone: [''],
+      society_name: [''],
+      legal_status: [''],
+      society_capital: [''],
+      society_id_number: [''],
+      society_rcs: [''],
+      person_representing: ['']
     })
 
     this.mandateForm.valueChanges.subscribe(() => {
-      this.mandateForm.value['cli1_personnal_phone'] = this.mandateForm.value['cli1_personnal_phone']?.internationalNumber
-      this.mandateForm.value['cli1_home_phone'] = this.mandateForm.value['cli1_home_phone']?.internationalNumber
+      this.mandateForm.value['personnal_phone'] = this.mandateForm.value['personnal_phone']?.internationalNumber
+      this.mandateForm.value['home_phone'] = this.mandateForm.value['home_phone']?.internationalNumber
     })
   }
 }

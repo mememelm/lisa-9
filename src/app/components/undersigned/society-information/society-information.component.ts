@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { FormGroup } from '@angular/forms';
+import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-society-information',
@@ -6,6 +7,9 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./society-information.component.scss']
 })
 export class SocietyInformationComponent implements OnInit {
+
+  @Input() parentFormGroup: FormGroup
+  @Input() display = true
 
   constructor() { }
 
