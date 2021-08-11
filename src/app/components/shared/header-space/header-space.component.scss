@@ -1,0 +1,64 @@
+@import "../../../../sass/variables.scss";
+
+.content-header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  border-bottom: 1px solid #f3f3f3;
+  z-index: 9999;
+  mat-toolbar {
+    background-color: #ffffff;
+    .nav-link-item {
+      text-transform: uppercase;
+      font-weight: 700;
+      color: #000;
+      font-size: 1.125rem;
+      margin: 0 10px;
+      transition: 0.2s ease-in, color 0.2s ease-in;
+      &:hover {
+        color: $blue-title;
+      }
+    }
+  }
+}
+
+.top-header {
+  height: 80px;
+  background-color: #ffffff;
+}
+.img-logo {
+  width: 320px;
+  margin-left: 32px;
+  &:hover {
+    cursor: pointer;
+  }
+  @media screen and (max-width: 600px) {
+    width: 200px;
+    margin-left: 10px;
+  }
+  @media screen and (max-width: 386px) {
+    width: 175px;
+  }
+}
+.icon-avocat-user {
+  width: 40px;
+  padding-left: 4px;
+  border-left: 2px solid #a5a5a5;
+  @media screen and (max-width: 442px) {
+    width: 34px;
+  }
+}
+.link-inscrire {
+  text-decoration: none;
+  span {
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 1rem;
+    color: #222;
+    padding-right: 10px;
+    line-height: 1;
+    @media screen and (max-width: 442px) {
+      display: none;
+    }
+  }
+}

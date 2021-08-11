@@ -1,21 +1,25 @@
 <app-header-registration [displayConnexion]="false"></app-header-registration>
 
-<div class="page-container container text-center">
-  <h1>Connexion à votre espace privé</h1>
-  <h2>Content de vous retrouver: saisissez votre email et mot de passe pour retrouver votre espace privé et sécurisé
-  </h2>
+<div class="connexion container-large text-center">
+  <div class="content-title">
+    <h1 class="h1">Connexion à votre espace privé</h1>
+    <p class="p">Content de vous retrouver: <br> saisissez votre email et mot de passe pour retrouver votre espace privé
+      et sécurisé</p>
+  </div>
   <div class="card">
-    <div class="card-body">
+    <div class="content-form">
       <form [formGroup]="userForm">
         <div class="form-group">
-          <input class="form-control" type="email" placeholder="Email" formControlName="email">
+          <label for="email">Email</label>
+          <input class="form-control" type="email" id="email" placeholder="" formControlName="email">
         </div>
         <div class="form-group">
-          <input class="form-control" type="password" placeholder="Mot de passe" formControlName="password">
+          <label for="password">Mot de passe</label>
+          <input class="form-control" type="password" id="password" placeholder="" formControlName="password">
         </div>
       </form>
     </div>
-    <div class="card-footer">
+    <div class="action-btn">
       <button class="btn btn-success" (click)="connexion()">VALIDER</button>
       <button class="btn btn-success" [routerLink]="ctrl.route.registration">
         Créer un compte si c’est votre première connexion
@@ -23,3 +27,6 @@
     </div>
   </div>
 </div>
+<footer class="footer-registration">
+  <p>made with ❤ by LISA</p>
+</footer>

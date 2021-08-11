@@ -8,7 +8,22 @@ mat-toolbar {
   right: 0;
   left: 0;
   margin: auto;
-
+  @media screen and (max-width: 600px) {
+    padding: 0;
+  }
+.img-logo {
+  width: 250px;
+  @media screen and (max-width: 600px) {
+    width: 200px;
+    margin-left: 10px;
+  }
+  @media screen and (max-width: 442px) {
+    width: 180px;
+  }
+  @media screen and (max-width: 385px) {
+    width: 140px;
+  }
+}
   .title {
     content: initial;
     display: block;
@@ -18,9 +33,12 @@ mat-toolbar {
     color: #fff;
     opacity: 0.8;
     transition: opacity 0.35s ease-in-out;
-  }
-
-  .title:hover {
-    color: white;
+    @media screen and (max-width: 600px) {
+      padding: 12px 6px;
+      font-size: 1rem;
+    }
+    &:hover {
+      color: #00adb5;
+    }
   }
 }

@@ -1,31 +1,41 @@
 <app-header-registration [displayRegistration]="false"></app-header-registration>
 
-<div class="page-container container text-center">
-  <h1>Créer un compte</h1>
-  <h2>Si c’est votre première connexion</h2>
+<div class="connexion container-large text-center">
+  <div class="content-title">
+    <h1 class="h1">Créer un compte</h1>
+    <p class="p">Si c’est votre première connexion</p>
+  </div>
+  
   <div class="card">
-    <div class="card-body">
+    <div class="content-form">
       <form [formGroup]="userForm">
         <div class="form-group">
-          <input class="form-control" type="text" placeholder="Prénom" formControlName="firstname">
+          <label for="prenom">Prénom</label>
+          <input class="form-control" type="text" placeholder="" formControlName="firstname" id="prenom">
         </div>
         <div class="form-group">
-          <input class="form-control" type="text" placeholder="Nom" formControlName="lastname">
+          <label for="nom">Nom</label>
+          <input class="form-control" type="text" id="nom" placeholder="" formControlName="lastname">
         </div>
         <div class="form-group">
-          <app-phone-input [parentFormGroup]="userForm" controlName="phone_number"></app-phone-input>
+          <label for="phone_number">N° de téléphone portable</label>
+          <app-phone-input [parentFormGroup]="userForm" id="phone_number" controlName="phone_number"></app-phone-input>
         </div>
         <div class="form-group">
-          <input class="form-control" type="text" placeholder="N° de toque" formControlName="toque_number">
+          <label for="toque_number">N° de toque</label>
+          <input class="form-control" type="text" id="toque_number" placeholder="" formControlName="toque_number">
         </div>
         <div class="form-group">
-          <input class="form-control" type="email" placeholder="Email" formControlName="email">
+          <label for="email">Email</label>
+          <input class="form-control" type="email" id="email" placeholder="" formControlName="email">
         </div>
         <div class="form-group">
-          <input class="form-control" type="password" placeholder="Mot de passe" formControlName="password">
+          <label for="password">Mot de passe</label>
+          <input class="form-control" type="password" id="password" placeholder="" formControlName="password">
         </div>
         <div class="form-group">
-          <input class="form-control" type="password" placeholder="Confirmer mot de passe"
+          <label for="match_password">Confirmer mot de passe</label>
+          <input class="form-control" type="password" id="match_password" placeholder=""
             formControlName="match_password">
         </div>
       </form>
@@ -33,8 +43,12 @@
         <label class="text-danger">Mots de passe différents</label>
       </div>
     </div>
-  </div>
-  <div class="card-footer">
-    <button class="btn btn-success" (click)="register()">S'enregistrer</button>
+    <div class="action-btn">
+      <button class="btn btn-success" (click)="register()">S'enregistrer</button>
+    </div>
   </div>
 </div>
+
+<footer class="footer-registration">
+  <p>made with ❤ by LISA</p>
+</footer>

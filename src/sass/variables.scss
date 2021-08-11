@@ -142,42 +142,48 @@ ul {
 }
 .my3 {
   margin-top: 1.5rem;
-  margin-bottom: 1.5rem
+  margin-bottom: 1.5rem;
 }
 .my4 {
   margin-top: 2rem;
-  margin-bottom: 2rem
+  margin-bottom: 2rem;
+}
+.mx24px {
+  margin: 0 24px;
 }
 .my5 {
   margin-top: 2.5rem;
-  margin-bottom: 2.5rem
+  margin-bottom: 2.5rem;
 }
 .mr4 {
   margin-right: 2rem;
 }
-.mb5{
+.mb5 {
   margin-bottom: 2.5rem;
 }
-.mt5{
+.mt5 {
   margin-top: 2.5rem;
 }
-.mt4{
+.mt4 {
   margin-top: 2rem;
 }
 .mb2 {
-  margin-bottom:1rem
+  margin-bottom: 1rem;
 }
 .mb3 {
-  margin-bottom:1.5rem
+  margin-bottom: 1.5rem;
+}
+.mb4 {
+  margin-bottom: 2rem;
 }
 
 .scale-bg {
   &:hover {
-    img {
+    img.img-bg {
       transform: scale(1.05);
     }
   }
-  img {
+  img.img-bg {
     transition: all 1s;
   }
 }
