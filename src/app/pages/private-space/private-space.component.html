@@ -1,32 +1,42 @@
 <app-header-space></app-header-space>
 
-<div class="container">
-  <div class="private-header">
-    <div class="text-decoration-none inline-block mx-auto ampstart-headerbar-home-link mb0 md-mb0">
-      <img src="../../../assets/images/logo_LISA_quadri.png" width="330" height="97">
+<main class="main">
+  <section id="bannerHeader">
+    <div class="content-banner-header scale-bg">
+      <img src="../../../assets/images/solution_avocat_deb.jpg" alt="">
+      <div class="md-mx-auto position-absolute content-text-banner-header">
+        <div class="private-header">
+          <div class="text-decoration-none inline-block mx-auto ampstart-headerbar-home-link mb0 md-mb0">
+            <img src="../../../assets/images/logo_LISA_quadri.png" width="330" height="97">
+          </div>
+          <br>
+          <h3 class="h4"><b> Bienvenue ... sur votre espace privé. </b></h3>
+          <h3 class="h5">Ici vous trouverez :
+            des documents, des formations, des conseils, des outils, des informations pour réaliser au mieux vos ventes
+            immobilières.
+          </h3>
+        </div>
+        <div class="d-flex">
+          <div class="ampstart-btn ampstart-btn-secondary md-m20 container-navigate-mandats"
+            [routerLink]="ctrl.route.mandatUndersigned"
+            title="Accès privé à la plateforme 1GER pour la gestion et le suivi de vos dossiers. La plateforme vous permet de lancer la commercialisation dun bien immobilier très facilement.">
+            Plateforme de gestion des mandats
+          </div>
+          <div class="ampstart-btn ampstart-btn-secondary md-m20 container-navigate"
+            (click)="ctrl.scrollElement(documentation)">
+            Documentation
+          </div>
+          <div class="ampstart-btn ampstart-btn-secondary md-m20 container-navigate"
+            (click)="ctrl.scrollElement(advice)">
+            Fiches Conseils
+          </div>
+        </div>
+      </div>
     </div>
-    <br>
-    <h3 class="h4"><b> Bienvenue ... sur votre espace privé. </b></h3>
-    <h3 class="h5">Ici vous trouverez :
-      des documents, des formations, des conseils, des outils, des informations pour réaliser au mieux vos ventes
-      immobilières.
-    </h3>
-  </div>
+  </section>
 
-  <div class="d-flex">
-    <div class="ampstart-btn ampstart-btn-secondary md-m20 container-navigate-mandats"
-      [routerLink]="ctrl.route.mandatUndersigned"
-      title="Accès privé à la plateforme 1GER pour la gestion et le suivi de vos dossiers. La plateforme vous permet de lancer la commercialisation dun bien immobilier très facilement.">
-      Plateforme de gestion de des mandats
-    </div>
-    <div class="ampstart-btn ampstart-btn-secondary md-m20 container-navigate"
-      (click)="ctrl.scrollElement(documentation)">
-      Documentation
-    </div>
-    <div class="ampstart-btn ampstart-btn-secondary md-m20 container-navigate" (click)="ctrl.scrollElement(advice)">
-      FIches Conseils
-    </div>
-  </div>
+
+
 
   <div class="mt-4">
     <section #documentation>
@@ -67,6 +77,6 @@
       </div>
     </section>
   </div>
-</div>
+</main>
 
 <app-footer></app-footer>
