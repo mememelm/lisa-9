@@ -13,8 +13,17 @@
 
     <h2><b>ENTRE LES SOUSSIGNES</b></h2>
 
-    <app-person-information [parentFormGroup]="mandateForm" [display]="false"></app-person-information>
+    <div [formGroup]="situationForm">
+      <mat-radio-group aria-label="Choisir votre situation" formControlName="situation">
+        <mat-radio-button value="person">Personne physique</mat-radio-button>
+        <mat-radio-button value="society">Société</mat-radio-button>
+      </mat-radio-group>
+    </div>
 
-    <app-society-information [parentFormGroup]="mandateForm" [display]="true"></app-society-information>
+    <app-person-information [parentFormGroup]="mandateForm" [display]="situation.value == 'person'">
+    </app-person-information>
+
+    <app-society-information [parentFormGroup]="mandateForm" [display]="situation.value == 'society'">
+    </app-society-information>
   </form>
 </div>

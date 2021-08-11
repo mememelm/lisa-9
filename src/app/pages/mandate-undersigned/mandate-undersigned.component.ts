@@ -1,4 +1,4 @@
-import { FormGroup } from '@angular/forms';
+import { AbstractControl, FormGroup } from '@angular/forms';
 import { ControllerService } from './../../services/controller.service';
 import { Component, OnInit } from '@angular/core';
 
@@ -10,8 +10,13 @@ import { Component, OnInit } from '@angular/core';
 export class MandateUndersignedComponent implements OnInit {
 
   mandateForm: FormGroup
+  situationForm: FormGroup
 
   constructor(public ctrl: ControllerService) { }
+
+  get situation(): AbstractControl {
+    return this.situationForm.get('situation')
+  }
 
   ngOnInit(): void {
     this.mandateForm = this.ctrl.fb.group({
@@ -42,6 +47,14 @@ export class MandateUndersignedComponent implements OnInit {
     this.mandateForm.valueChanges.subscribe(() => {
       this.mandateForm.value['personnal_phone'] = this.mandateForm.value['personnal_phone']?.internationalNumber
       this.mandateForm.value['home_phone'] = this.mandateForm.value['home_phone']?.internationalNumber
+    })
+
+    this.initializeClientSituation()
+  }
+
+  initializeClientSituation() {
+    this.situationForm = this.ctrl.fb.group({
+      situation: ['person']
     })
   }
 }
