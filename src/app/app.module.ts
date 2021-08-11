@@ -1,5 +1,5 @@
 import { RouterModule } from '@angular/router';
-import { BrowserModule } from '@angular/platform-browser';
+
 import { CUSTOM_ELEMENTS_SCHEMA, NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
@@ -10,27 +10,35 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { HomeComponent } from './pages/home/home.component';
 import { RegistrationComponent } from './pages/registration/registration.component';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations'
+
+import { FlexLayoutModule } from '@angular/flex-layout';
+import { BrowserModule } from '@angular/platform-browser';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { ToastrModule } from 'ngx-toastr';
 import { BackButtonDisableModule } from 'angular-disable-browser-back-button';
 import { DataTablesModule } from 'angular-datatables';
 import { NgxIntlTelInputModule } from 'ngx-intl-tel-input';
-import { MatToolbarModule } from '@angular/material/toolbar'
-import { MatCheckboxModule } from '@angular/material/checkbox'
-import { MatInputModule } from '@angular/material/input'
-import { MatFormFieldModule } from '@angular/material/form-field'
-import { MatRadioModule } from '@angular/material/radio'
-import { MatSelectModule } from '@angular/material/select'
+import { MatToolbarModule } from '@angular/material/toolbar';
+import { MatCheckboxModule } from '@angular/material/checkbox';
+import { MatInputModule } from '@angular/material/input';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatRadioModule } from '@angular/material/radio';
+import { MatSelectModule } from '@angular/material/select';
+import { MatSidenavModule } from '@angular/material/sidenav';
+import { MatIconModule } from '@angular/material/icon';
+import { MatButtonModule } from '@angular/material/button';
+import {MatTooltipModule} from '@angular/material/tooltip';
 
 import { HeaderRegistrationComponent } from './components/shared/header-registration/header-registration.component';
 import { HeaderComponent } from './components/shared/header/header.component';
-import { LockedComponent } from './pages/locked/locked.component'
+import { LockedComponent } from './pages/locked/locked.component';
 import { PhoneInputComponent } from './components/phone-input/phone-input.component';
 import { ConnexionComponent } from './pages/connexion/connexion.component';
 import { PrivateSpaceComponent } from './pages/private-space/private-space.component';
 import { FooterComponent } from './components/shared/footer/footer.component';
 import { StoryComponent } from './pages/story/story.component';
+
 import { SolutionLawyerComponent } from './pages/solution-lawyer/solution-lawyer.component';
 import { ActualityComponent } from './pages/actuality/actuality.component';
 import { UserRoleComponent } from './pages/admin/user-role/user-role.component';
@@ -45,6 +53,8 @@ import { PersonInformationComponent } from './components/undersigned/person-info
 import { SocietyInformationComponent } from './components/undersigned/society-information/society-information.component';
 import { LawyerInformationComponent } from './components/undersigned/lawyer-information/lawyer-information.component';
 import { SocietyLawyerInformationComponent } from './components/undersigned/society-lawyer-information/society-lawyer-information.component';
+import { AddressInputComponent } from './components/address-input/address-input.component';
+import { ContactInputComponent } from './components/contact-input/contact-input.component';
 
 @NgModule({
   declarations: [
@@ -72,18 +82,26 @@ import { SocietyLawyerInformationComponent } from './components/undersigned/soci
     SocietyInformationComponent,
     LawyerInformationComponent,
     SocietyLawyerInformationComponent,
+    AddressInputComponent,
+    ContactInputComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
     FormsModule,
+    FlexLayoutModule,
     NgbModule,
     RouterModule,
     BrowserAnimationsModule,
     MatToolbarModule,
     ReactiveFormsModule,
-    ToastrModule.forRoot({ timeOut: 5000, positionClass: 'toast-bottom-right', preventDuplicates: true, closeButton: true }),
+    ToastrModule.forRoot({
+      timeOut: 5000,
+      positionClass: 'toast-bottom-right',
+      preventDuplicates: true,
+      closeButton: true
+    }),
     BackButtonDisableModule.forRoot({ preserveScrollPosition: true }),
     NgxIntlTelInputModule,
     DataTablesModule,
@@ -92,12 +110,17 @@ import { SocietyLawyerInformationComponent } from './components/undersigned/soci
     MatInputModule,
     MatFormFieldModule,
     MatRadioModule,
-    MatSelectModule
+    MatSelectModule,
+    MatSidenavModule,
+    MatIconModule,
+    MatButtonModule,
+    MatTooltipModule,
+    FontAwesomeModule
   ],
   providers: [
-    { provide: HTTP_INTERCEPTORS, useClass: EnvInterceptor, multi: true },
+    { provide: HTTP_INTERCEPTORS, useClass: EnvInterceptor, multi: true }
   ],
   bootstrap: [AppComponent],
   schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })
-export class AppModule { }
+export class AppModule {}

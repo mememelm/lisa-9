@@ -2,7 +2,7 @@
   <p>
     Genre :
     <mat-form-field>
-      <mat-select formControlName="cli1_gender">
+      <mat-select formControlName="gender">
         <mat-option *ngFor="let gender of personGender" [value]="gender.value">
           {{gender.display}}
         </mat-option>
@@ -11,61 +11,36 @@
   </p>
   <p>Nom :
     <mat-form-field>
-      <input matInput type="text" formControlName="cli1_last_name">
+      <input matInput type="text" formControlName="last_name">
     </mat-form-field>
   </p>
   <p>Prénom :
     <mat-form-field>
-      <input matInput type="text" formControlName="cli1_first_name">
+      <input matInput type="text" formControlName="first_name">
     </mat-form-field>
   </p>
   <p>Date de naissance :
     <mat-form-field>
-      <input matInput type="date" formControlName="cli1_date_birth">
+      <input matInput type="date" formControlName="date_birth">
     </mat-form-field>
     Commune de naissance :
     <mat-form-field>
-      <input matInput type="text" formControlName="cli1_place_birth">
+      <input matInput type="text" formControlName="place_birth">
     </mat-form-field>
     Département :
     <mat-form-field>
-      <input matInput type="text" formControlName="cli1_department">
+      <input matInput type="text" formControlName="department">
     </mat-form-field>
   </p>
   <p>De nationalité :
     <mat-form-field>
-      <input matInput type="text" formControlName="cli1_nationality">
+      <input matInput type="text" formControlName="nationality">
     </mat-form-field>
   </p>
 
   <h3>Domicilié(e)</h3>
 
-  <p>Adresse :
-    <mat-form-field>
-      <input matInput type="text" formControlName="cli1_address">
-    </mat-form-field>
-  </p>
-  <p>Ville :
-    <mat-form-field>
-      <input matInput type="text" formControlName="cli1_city">
-    </mat-form-field>
-    Code Postal :
-    <mat-form-field>
-      <input matInput type="text" formControlName="cli1_postal_code">
-    </mat-form-field>
-    Pays :
-    <mat-form-field>
-      <input matInput type="text" formControlName="cli1_country">
-    </mat-form-field>
-  </p>
-  <p>Tel portable :
-    <app-phone-input [parentFormGroup]="parentFormGroup" controlName="cli1_personnal_phone"></app-phone-input>
-    Tel fix :
-    <app-phone-input [parentFormGroup]="parentFormGroup" controlName="cli1_home_phone"></app-phone-input>
-  </p>
-  <p>Adresse email :
-    <mat-form-field>
-      <input matInput type="text" formControlName="cli1_email">
-    </mat-form-field>
-  </p>
+  <app-address-input [parentFormGroup]="parentFormGroup"></app-address-input>
+
+  <app-contact-input [parentFormGroup]="parentFormGroup"></app-contact-input>
 </div>

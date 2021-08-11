@@ -1,0 +1,154 @@
+main {
+  margin-top: 144px;
+  @media screen and (max-width: 960px) {
+    margin-top: 64px;
+  }
+  .content-banner-header {
+    overflow: hidden;
+    position: relative;
+    height: 100%;
+    background-image: url(../../../assets/images/1274-droit-immobilier.jpg);
+    background-position: bottom center;
+    .content-text-banner-header {
+      padding: 4rem 0;
+      max-width: 1280px;
+      width: 100%;
+      margin: 0 auto;
+      .text-banner {
+        padding: 24px;
+        @media screen and (max-width: 610px) {
+          padding: 16px;
+        }
+        h1 {
+          color: #fff;
+          line-height: 44px;
+          margin-bottom: 24px;
+          font-size: 3.5rem;
+          font-weight: 700;
+          line-height: 1;
+          max-width: 500px;
+          @media screen and (max-width: 960px) {
+            font-size: 3rem;
+          }
+          @media screen and (max-width: 575px) {
+            font-size: 2.75rem;
+          }
+        }
+      }
+
+      a {
+        background-color: #fff;
+        border: none;
+        color: #222;
+        font-size: 0.94rem;
+        font-weight: 700;
+        padding: 0.5rem 2rem;
+        transition: background-color 0.2s ease-in, color 0.2s ease-in;
+        text-transform: uppercase;
+        color: #222;
+        &:hover {
+          background-color: #222;
+          color: #fff;
+        }
+      }
+    }
+  }
+  .service-avocat {
+    margin: 5rem 0 3rem;
+    @media screen and (max-width: 960px) {
+      margin: 3rem 0 2rem;
+    }
+    .content-service {
+      article {
+        font-family: "Open Sans", sans-serif;
+        padding-right: 7rem;
+        font-size: 0.94rem;
+        @media screen and (max-width: 960px) {
+          padding-right: 0;
+          font-size: 0.875rem;
+        }
+        @media screen and (max-width: 442px) {
+          font-size: 0.75rem;
+        }
+        h2.h2 {
+          font-size: 3.5rem;
+          @media screen and (max-width: 960px) {
+            font-size: 2.5rem;
+          }
+          @media screen and (max-width: 575px) {
+            font-size: 2.25rem;
+          }
+        }
+        .avatar {
+          width: 120px;
+          height: 150px;
+          object-fit: cover;
+          @media screen and (max-width: 442px) {
+            width: 100px;
+            height: 130px;
+          }
+        }
+
+        blockquote {
+          font-size: 2.2rem;
+          margin: 1.5rem 0 1rem;
+          line-height: 1.2;
+          border-left: none;
+          padding-left: 0;
+          @media screen and (max-width: 960px) {
+            font-size: 2rem;
+          }
+          @media screen and (max-width: 575px) {
+            font-size: 1.5rem;
+          }
+        }
+        p {
+          line-height: 1.6;
+        }
+        tr {
+          vertical-align: top;
+          td {
+            padding-bottom: 6px;
+          }
+        }
+        .list-blue-article {
+          list-style: disc;
+          font-size: larger;
+          color: #00adb5;
+        }
+        .blockquote-blue {
+          color: #00adb5;
+        }
+        .blockquote-h1 {
+          font-size: 3.25rem;
+          @media screen and (max-width: 960px) {
+            font-size: 3rem;
+          }
+          @media screen and (max-width: 442px) {
+            font-size: 2.5rem;
+          }
+        }
+        .logo-article {
+          width: 265px;
+          padding: 24px;
+          border: 1px solid #2222225c;
+        }
+        .btn-lisa-outlined {
+          display: flex;
+          max-width: 159px;
+        }
+      }
+    }
+    .sidebar-service {
+      position: sticky;
+      top: 144px;
+
+      @media screen and (max-width: 960px) {
+        display: none;
+      }
+      .content-action-btn {
+        margin: 3rem 0;
+      }
+    }
+  }
+}

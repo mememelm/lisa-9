@@ -1,2 +1,100 @@
 <app-header></app-header>
-<p>actuality works!</p>
+
+<main class="main">
+    <section id="bannerHeader">
+        <div class="content-banner-header scale-bg">
+            <div class="md-mx-auto content-text-banner-header">
+                <div fxLayout="column" fxLayoutAlign="space-between start" class="text-banner">
+                    <h1 class="h1">
+                        <span>LISA :</span>
+                        <br>
+                        ACTUALITÉS
+                    </h1>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="service-avocat">
+        <div class="container-large">
+            <div fxLayout="row" fxLayoutGap fxLayoutAlign="space-between start">
+                <div class="content-service">
+                    <article>
+                        <h2 class="h2">
+                            LISA : L'IMMOBILIÈRE DES AVOCATS VOUS FAIT VISITER SES RÉSEAUX
+                        </h2>
+                        <div class="mt5">
+                            <blockquote class="text-center blockquote-blue">
+                                Une société de services immobiliers
+                                <br>
+                                créée pour les avocats
+                                <br>
+                                et des professionnels de l’immobilier et du financement.
+                                <br><br>
+                                <img class="logo-article" src="../../../assets/images/logo-lisa.svg" alt="">
+                            </blockquote>
+
+                            <blockquote>
+                                Participez au nouveau projet qui contribue au développement de l'activité de toute la
+                                profession
+                            </blockquote>
+                            <a class="btn-lisa-outlined my5" [routerLink]="ctrl.route.registration">
+                                inscrivez-vous...
+                            </a>
+                        </div>
+                    </article>
+                </div>
+
+                <div class="sidebar-service">
+                    <h2 class="h2">UNE ALLIANCE DE COMPÉTENCES AU SERVICE DES AVOCATS</h2>
+                    <div fxLayout="row" class="content-action-btn">
+                        <a class="btn-lisa-outlined mr4" href="#">
+                            contact
+                        </a>
+                        <a class="btn-lisa-outlined"[routerLink]="ctrl.route.connexion">
+                            connexion
+                        </a>
+                    </div>
+                    <div>
+                        <h5 class="text-left text-sm-gt-center h5"># SUIVEZ-NOUS</h5>
+                        <ul fxLayout="row" fxLayoutGap fxLayoutAlign="center center" fxLayoutAlign.gt-sm="start center"
+                            class="text-sm-gt-center">
+                            <li>
+                                <a href="https://www.linkedin.com/company/1274-avocats/" target="_blank"
+                                    class="inline-block p1" aria-label="immobilier avocat linkedin">
+
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://www.facebook.com/1274_immobili%C3%A8re_des_avocats-102311111670278/"
+                                    target="_blank" class="inline-block p1" aria-label="immobilier avocat FaceBook">
+
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://twitter.com/1274avocat" target="_blank" class="inline-block p1"
+                                    aria-label="immobilier avocat twitter">
+
+                                </a>
+                            </li>
+                            <li>
+                                <a href="mailto:hello@lisa-plateforme.com" target="_blank" class="inline-block p1"
+                                    aria-label="immobilier avocat mail">
+                                    <mat-icon aria-hidden="false" aria-label="Example email icon">email</mat-icon>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://www.google.com/search?ei=GRt_X7mlOoTAa47iiugG&q=1274+avocats&oq=1274+avocats&gs_lcp=CgZwc3ktYWIQAzoHCAAQyQMQEzoECAAQEzoCCCY6CAgAEBYQHhATOggIABDJAxCRAjoFCAAQkQI6BAgAEEM6AggAOgIILjoKCC4QyQMQQxCTAjoFCAAQyQM6BggAEBYQHjoLCAAQyQMQFhAKEB46BQghEKABUK5BWKRlYJhmaAJwAHgAgAFOiAGxBpIBAjEzmAEAoAEBqgEHZ3dzLXdpesABAQ&sclient=psy-ab&ved=0ahUKEwj5laPak6XsAhUE4BoKHQ6xAm0Q4dUDCA0&uact=5#"
+                                    target="_blank" class="inline-block p1" aria-label="immobilier avocat map">
+                                    <mat-icon aria-hidden="false" aria-label="Example place icon">place</mat-icon>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+</main>
+
+<app-footer></app-footer>
