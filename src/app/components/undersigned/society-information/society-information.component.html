@@ -30,7 +30,8 @@
 
   <h3>Siège social :</h3>
 
-  <app-address-input [parentFormGroup]="parentFormGroup"></app-address-input>
+  <app-address-input [parentFormGroup]="parentFormGroup" address="address" city="city" postalCode="postal_code"
+    country="country"></app-address-input>
 
   <h3>Représentée par :</h3>
 
@@ -51,5 +52,7 @@
     </mat-form-field>
   </p>
 
-  <app-contact-input [parentFormGroup]="parentFormGroup"></app-contact-input>
+  <app-contact-input [parentFormGroup]="parentFormGroup" personnalPhone="personnal_phone" homePhone="home_phone"
+    email="email">
+  </app-contact-input>
 </div>

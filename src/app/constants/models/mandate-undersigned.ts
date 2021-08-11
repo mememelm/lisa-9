@@ -36,6 +36,7 @@ export interface MandateUndersigned {
   avi_declaration_date?: Date
   avi_society_name?: string
   avi_legal_status?: string
+  avi_society_capital?: string
   avi_rcs?: string
   avi_id_number?: string
 }

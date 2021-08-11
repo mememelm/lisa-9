@@ -13,17 +13,45 @@
 
     <h2><b>ENTRE LES SOUSSIGNES</b></h2>
 
-    <div [formGroup]="situationForm">
-      <mat-radio-group aria-label="Choisir votre situation" formControlName="situation">
+    <div [formGroup]="situationClientForm">
+      <mat-radio-group aria-label="Choisir votre situation" formControlName="client">
         <mat-radio-button value="person">Personne physique</mat-radio-button>
         <mat-radio-button value="society">Société</mat-radio-button>
       </mat-radio-group>
     </div>
 
-    <app-person-information [parentFormGroup]="mandateForm" [display]="situation.value == 'person'">
+    <app-person-information [parentFormGroup]="mandateForm" [display]="client.value == 'person'">
     </app-person-information>
 
-    <app-society-information [parentFormGroup]="mandateForm" [display]="situation.value == 'society'">
+    <app-society-information [parentFormGroup]="mandateForm" [display]="client.value == 'society'">
     </app-society-information>
+
+    <p>
+      Agissant <b>en qualité de seul(e)(s) propriétaire(s),</b> et nous engageant à produire tout justificatif de
+      propriété ci-après désigné également le " <b>MANDAT</b> ", d'une part,
+    </p>
+
+    <p><b>ET :</b></p>
+
+    <div [formGroup]="situationAviForm">
+      <mat-radio-group aria-label="Choisir votre situation" formControlName="avi">
+        <mat-radio-button value="lawyer">Maître</mat-radio-button>
+        <mat-radio-button value="society">Société</mat-radio-button>
+      </mat-radio-group>
+    </div>
+
+    <app-lawyer-information [parentFormGroup]="mandateForm" [display]="avi.value == 'lawyer'"></app-lawyer-information>
+
+    <app-society-lawyer-information [parentFormGroup]="mandateForm" [display]="avi.value == 'society'">
+    </app-society-lawyer-information>
+
+    <p>
+      <b>Déclaré le : </b>
+      <mat-form-field>
+        <input matInput type="date" formControlName="avi_declaration_date">
+      </mat-form-field>
+      à l'Ordre des avocats en qualité de mandataire en transactions immobilières en applicaiton de l'article 6-45 du
+      RIN.
+    </p>
   </form>
 </div>
