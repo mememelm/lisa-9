@@ -25,6 +25,13 @@
 .top-header {
   height: 80px;
   background-color: #ffffff;
+  .role-user {
+    color: $blue-title;
+    margin-top: 6px;
+    label {
+      text-transform: capitalize;
+    }
+  }
 }
 .img-logo {
   width: 320px;

@@ -11,7 +11,7 @@ main {
     @media screen and (max-width: 600px) {
       height: 700px;
     }
-    img.img-bg{
+    img.img-bg {
       width: 100%;
       object-fit: cover;
       height: 526px;
@@ -54,10 +54,10 @@ main {
         @media screen and (max-width: 610px) {
           padding: 16px;
         }
-        .logo-lisa-banner{
+        .logo-lisa-banner {
           width: 100%;
           max-width: 330px;
-          margin: 24px 0 12px;
+          margin: 40px 0 28px;
           @media screen and (max-width: 600px) {
             margin: 0;
           }
@@ -77,8 +77,8 @@ main {
         p.p-subtitle {
           font-size: 1.25rem;
           font-weight: 700;
-          color: #000000
-        } 
+          color: #000000;
+        }
       }
       .container-clip-path {
         display: flex;
@@ -86,7 +86,7 @@ main {
           flex-wrap: wrap;
         }
         .container-navigate-mandats {
-          padding: 2rem 2rem .5rem;
+          padding: 2rem 2rem 0.5rem;
           height: 150px;
           width: 185px;
           font-size: large;
@@ -112,14 +112,14 @@ main {
             width: 156px;
           }
           @media screen and (max-width: 360px) {
-            padding: 1rem .75rem 0.5rem;
+            padding: 1rem 0.75rem 0.5rem;
             height: 128px;
             width: 130px;
           }
         }
-        
+
         .container-navigate {
-          padding: 2rem 2rem .5rem;
+          padding: 2rem 2rem 0.5rem;
           height: 150px;
           width: 185px;
           font-size: large;
@@ -137,21 +137,103 @@ main {
             width: 156px;
           }
           @media screen and (max-width: 360px) {
-            padding: 1rem .75rem 0.5rem;
+            padding: 1rem 0.75rem 0.5rem;
             height: 128px;
             width: 130px;
           }
         }
       }
-
+    }
+  }
+  .container-space {
+    .row {
+      --bs-gutter-x: inherit;
+    }
+    img.img-bg {
+      width: 100%;
+      object-fit: cover;
+      height: 100%;
+      @media screen and (max-width: 600px) {
+        height: 700px;
+      }
+      @media screen and (max-width: 442px) {
+        height: 800px;
+      }
+    }
+    .scale-bg {
+      overflow: hidden;
+    }
+    .form-card-clip {
+      width: 100%;
+      top: 10%;
+      margin: auto;
+      padding: 1%;
+      max-width: 380px;
+      height: 250px;
+      background: white;
+      opacity: 1;
+      clip-path: polygon(0% 0%, 99% 0%, 99% 100%, 20% 100%, 0% 80%);
+      left: 0;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      h2.h2 {
+        font-size: large;
+        margin-bottom: 0;
+        &.title-doc {
+          color: #51eff7;
+        }
+        &.title-conseil {
+          color: #96e7ea;
+        }
+      }
+      hr {
+        margin: 0.5rem 0;
+      }
+      ul {
+        padding-top: 1rem;
+        padding-left: 0;
+        li {
+          cursor: pointer;
+          position: relative;
+          color: black;
+          font-family: "Roboto", sans-serif;
+          font-size: normal;
+          line-height: 1.5;
+          margin-bottom: 2px;
+          &:after {
+            content: "";
+            position: absolute;
+            left: 0;
+            display: inline-block;
+            height: 0.5em;
+            width: 75%;
+            border-bottom: 2px solid;
+            margin-top: 10px;
+            opacity: 0;
+            -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+            transition: opacity 0.35s, transform 0.35s;
+            -webkit-transform: scale(0, 1);
+            transform: scale(0, 1);
+            bottom: 0;
+          }
+          &:hover {
+            &:after {
+              opacity: 1;
+              -webkit-transform: scale(1);
+              transform: scale(1);
+              cursor: pointer;
+            }
+          }
+        }
+      }
     }
   }
 }
 
-
-.bg-fiche-conseil{
-background: #96e7ea;
+.bg-fiche-conseil {
+  background: #96e7ea;
 }
 .bg-doc {
-background: #51eff7;
+  background: #51eff7;
 }

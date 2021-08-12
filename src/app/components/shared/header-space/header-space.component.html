@@ -6,16 +6,20 @@
           <img class="img-logo" src="../../../../assets/images/logo-lisa.svg" alt="logo">
         </a>
       </div>
-      <span *ngIf="role">
-        <i class="material-icons">account_balance_wallet</i>
-        {{role.abbreviation}}
-      </span>
-      <div>
+
+      <div fxLayout="row" fxLayoutAlign="space-between center">
         <a (click)="ctrl.logOut()" href="javascript:void(0)" fxLayout="row" fxLayoutAlign="center start"
           class="link-inscrire">
-          <span>{{user.firstname | titlecase}} {{user.lastname | titlecase}}</span>
+          <div fxLayout="column" fxLayoutAlign="end start">
+
+            <span>{{user.firstname | titlecase}} {{user.lastname | titlecase}}</span>
+            <span class="role-user" *ngIf="role">
+              <label>Rôle :</label> {{role.abbreviation}}
+            </span>
+          </div>
           <img class="icon-avocat-user" src="../../../../assets/images/icon-avocat-user.png" alt="">
         </a>
+
       </div>
     </mat-toolbar-row>
   </mat-toolbar>
