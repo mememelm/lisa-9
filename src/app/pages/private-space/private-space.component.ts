@@ -22,7 +22,12 @@ export class PrivateSpaceComponent implements OnInit {
 
   constructor(public ctrl: ControllerService) { }
 
-  ngOnInit(): void { }
+  ngOnInit(): void {
+    let user = this.ctrl.storage.user()
+    if (!user) {
+      this.ctrl.logOut()
+    }
+  }
 
   toogleView(element: string) {
     switch (element) {
