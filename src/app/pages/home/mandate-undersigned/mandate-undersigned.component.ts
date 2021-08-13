@@ -1,5 +1,5 @@
 import { AbstractControl, FormGroup } from '@angular/forms';
-import { ControllerService } from './../../services/controller.service';
+import { ControllerService } from '../../../services/controller.service';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -12,6 +12,7 @@ export class MandateUndersignedComponent implements OnInit {
   mandateForm: FormGroup
   situationClientForm: FormGroup
   situationAviForm: FormGroup
+  displayCondition = false
 
   constructor(public ctrl: ControllerService) { }
 
@@ -21,6 +22,14 @@ export class MandateUndersignedComponent implements OnInit {
 
   get avi(): AbstractControl {
     return this.situationAviForm.get('avi')
+  }
+
+  get margin_negociation(): AbstractControl {
+    return this.mandateForm.get('margin_negociation')
+  }
+
+  get additional_hour_type(): AbstractControl {
+    return this.mandateForm.get('additional_hour_type')
   }
 
   ngOnInit(): void {
@@ -63,12 +72,41 @@ export class MandateUndersignedComponent implements OnInit {
       avi_legal_status: [''],
       avi_society_capital: [''],
       avi_rcs: [''],
-      avi_id_number: ['']
+      avi_id_number: [''],
+      object_cession: [''],
+      building_place: [''],
+      building_address: [''],
+      building_city: [''],
+      building_postal_code: [''],
+      building_country: [''],
+      building_name: [''],
+      building_area: [''],
+      building_description: [''],
+      building_lot: [''],
+      net_price: [''],
+      net_price_text: [''],
+      condition: [''],
+      margin_negociation: [15],
+      honorary_ht: [''],
+      honorary_ht_text: [''],
+      honorary_ttc: [''],
+      honorary_ttc_text: [''],
+      honorary_modality: [''],
+      additional_percent_ht: [''],
+      additional_percent_ht_text: [''],
+      additional_percent_ttc: [''],
+      additional_percent_ttc_text: [''],
+      additional_amount_ht: [''],
+      additional_amount_ht_text: [''],
+      additional_amount_ttc: [''],
+      additional_amount_ttc_text: [''],
+      additional_hour_type: ['']
     })
 
     this.mandateForm.valueChanges.subscribe(() => {
       this.mandateForm.value['personnal_phone'] = this.mandateForm.value['personnal_phone']?.internationalNumber
       this.mandateForm.value['home_phone'] = this.mandateForm.value['home_phone']?.internationalNumber
+      this.margin_negociation.value == 'other' ? this.displayCondition = true : this.displayCondition = false
     })
 
     this.initializeClientSituation()

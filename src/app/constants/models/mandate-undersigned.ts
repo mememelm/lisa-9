@@ -39,4 +39,32 @@ export interface MandateUndersigned {
   avi_society_capital?: string
   avi_rcs?: string
   avi_id_number?: string
+  object_cession?: string
+  building_place?: string
+  building_address?: string
+  building_city?: string
+  building_postal_code?: string
+  building_country?: string
+  building_name?: string
+  building_area?: number
+  building_description?: string
+  building_lot?: string
+  net_price?: number
+  net_price_text?: string
+  condition?: string
+  margin_negociation?: number | number
+  honorary_ht?: number
+  honorary_ht_text?: string
+  honorary_ttc?: number
+  honorary_ttc_text?: string
+  honorary_modality?: string
+  additional_percent_ht?: number
+  additional_percent_ht_text?: string
+  additional_percent_ttc?: number
+  additional_percent_ttc_text?: string
+  additional_amount_ht?: number
+  additional_amount_ht_text?: string
+  additional_amount_ttc?: number
+  additional_amount_ttc_text?: string
+  additional_hour_type?: string
 }

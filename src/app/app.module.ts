@@ -48,13 +48,18 @@ import { PrivateDocumentationComponent } from './components/private-documentatio
 import { PrivateAdviceComponent } from './components/private-advice/private-advice.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { HeaderSpaceComponent } from './components/shared/header-space/header-space.component';
-import { MandateUndersignedComponent } from './pages/mandate-undersigned/mandate-undersigned.component';
+import { MandateUndersignedComponent } from './pages/home/mandate-undersigned/mandate-undersigned.component';
 import { PersonInformationComponent } from './components/undersigned/person-information/person-information.component';
 import { SocietyInformationComponent } from './components/undersigned/society-information/society-information.component';
 import { LawyerInformationComponent } from './components/undersigned/lawyer-information/lawyer-information.component';
 import { SocietyLawyerInformationComponent } from './components/undersigned/society-lawyer-information/society-lawyer-information.component';
 import { AddressInputComponent } from './components/address-input/address-input.component';
 import { ContactInputComponent } from './components/contact-input/contact-input.component';
+import { BuildingInformationComponent } from './components/undersigned/building-information/building-information.component';
+import { BuildingFinancialComponent } from './components/undersigned/building-financial/building-financial.component';
+import { TextMissionComponent } from './components/undersigned/text-mission/text-mission.component';
+import { RenumerationAssistanceComponent } from './components/undersigned/renumeration-assistance/renumeration-assistance.component';
+import { RenumerationTransactionComponent } from './components/undersigned/renumeration-transaction/renumeration-transaction.component';
 
 @NgModule({
   declarations: [
@@ -84,6 +89,11 @@ import { ContactInputComponent } from './components/contact-input/contact-input.
     SocietyLawyerInformationComponent,
     AddressInputComponent,
     ContactInputComponent,
+    BuildingInformationComponent,
+    BuildingFinancialComponent,
+    TextMissionComponent,
+    RenumerationAssistanceComponent,
+    RenumerationTransactionComponent,
   ],
   imports: [
     BrowserModule,

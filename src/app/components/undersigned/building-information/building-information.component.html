@@ -1,0 +1,32 @@
+<form [formGroup]="parentFormGroup">
+  <p>2.1. <u>DESIGNATIONS DU BIEN IMMOBILIER</u> :</p>
+  <p>
+    Le <b>BIEN</b> immobilier objet de la vente, bâti sur la commune de
+    <mat-form-field>
+      <input matInput type="text" formControlName="building_place">
+    </mat-form-field>
+  </p>
+  <p>
+    est le suivant :
+    <app-address-input [parentFormGroup]="parentFormGroup" address="building_address" city="building_city"
+      postalCode="building_postal_code" country="building_country"></app-address-input>
+  </p>
+  <p>
+    Type et désignation :
+    <textarea class="mt-2 area" formArrayName="building_name"></textarea>
+  </p>
+  <p>
+    Surface :
+    <mat-form-field>
+      <input matInput type="text" formControlName="building_area">
+    </mat-form-field>
+  </p>
+  <p>
+    Descriptif :
+    <textarea class="mt-2 area" formArrayName="building_description"></textarea>
+  </p>
+  <p>
+    Numéro(s) de lot(s) :
+    <textarea class="mt-2 area" formArrayName="building_lot"></textarea>
+  </p>
+</form>

@@ -1,0 +1,37 @@
+<form [formGroup]="parentFormGroup">
+  <p>2.2. <u>CONDITIONS FINANCIERES DE L'OPERATION ENVISAGÉE</u></p>
+  <p>
+    Le prix de cession du <b>BIEN</b> objet du présent mandat ou les conditions financières de l'operations envisagée,
+    sauf accord dérogation ultérieur entre les <b>PARTIES</b>, est fixé au prix net vendeur de :
+    <mat-form-field>
+      <input matInput type="number" formControlName="net_price">
+    </mat-form-field> € (
+    <mat-form-field>
+      <input matInput type="text" formControlName="net_price_text">
+    </mat-form-field> euros) pour une cession aux conditions ordinaires et de droit pareille matière.
+  </p>
+  <p>
+    Le cas échéant, précisez les conditions particulères de l'opération, vente en état, garantie particulère, prise en
+    charge de passif, ou autre outre condition dont l'acceptation ou non a une incidence sur le prix :
+    <textarea class="mt-2 area" formControlName="condition"></textarea>
+  </p>
+  <p>
+    Toute modification des conditions juridiques, économiques ou financières devra faire l'objet d'un accord préalable
+    du <b>MANDAT.</b>
+  </p>
+  <p>Le prix sera réglé comptant le jour de la signature de(s) acte(s) authentique(s).</p>
+  <p>Par dérofgation à ce qui précède, l'<b>AVOCAT MANDATAIRE</b> disposera d'une marge de négociation d'ores et déjà
+    fixée à
+    <select formControlName="margin_negociation">
+      <option value="5">5 %</option>
+      <option value="10">10 %</option>
+      <option value="15">15 %</option>
+      <option value="20">20 %</option>
+      <option value="other">Autre</option>
+    </select>
+    <mat-form-field *ngIf="displayInput">
+      <input matInput type="number" placeholder="marge négociation">
+    </mat-form-field>
+    du prix ci-dessus arrêté.
+  </p>
+</form>
