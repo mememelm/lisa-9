@@ -1,20 +1,20 @@
 <form [formGroup]="parentFormGroup">
   <p>Adresse :
     <mat-form-field>
-      <input matInput type="text" formControlName="address">
+      <input matInput type="text" [formControlName]="address">
     </mat-form-field>
   </p>
   <p>Ville :
     <mat-form-field>
-      <input matInput type="text" formControlName="city">
+      <input matInput type="text" [formControlName]="city">
     </mat-form-field>
     Code Postal :
     <mat-form-field>
-      <input matInput type="text" formControlName="postal_code">
+      <input matInput type="text" [formControlName]="postalCode">
     </mat-form-field>
     Pays :
     <mat-form-field>
-      <input matInput type="text" formControlName="country">
+      <input matInput type="text" [formControlName]="country">
     </mat-form-field>
   </p>
 </form>

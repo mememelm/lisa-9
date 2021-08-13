@@ -1,4 +1,4 @@
-import { FormGroup } from '@angular/forms';
+import { FormControl, FormGroup } from '@angular/forms';
 import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
@@ -9,6 +9,10 @@ import { Component, Input, OnInit } from '@angular/core';
 export class AddressInputComponent implements OnInit {
 
   @Input() parentFormGroup: FormGroup
+  @Input() address: FormControl
+  @Input() city: FormControl
+  @Input() postalCode: FormControl
+  @Input() country: FormControl
 
   constructor() { }
 

@@ -1,13 +1,13 @@
 <app-header-space></app-header-space>
 
-<main class="main"> 
+<main class="main">
   <section id="bannerHeader">
     <div class="content-banner-header scale-bg">
       <img class="img-bg" src="../../../assets/images/1274-prive-head.jpg" alt="">
       <div class="md-mx-auto position-absolute content-text-banner-header">
         <div class="private-header">
           <div class="text-decoration-none inline-block mx-auto ampstart-headerbar-home-link mb0 md-mb0">
-            <img class='logo-lisa-banner' src="../../../assets/images/logo-lisa.svg" width="330" height="97">
+            <img class='logo-lisa-banner' src="../../../assets/images/logo-lisa.svg">
           </div>
           <h1 class="h1">Bienvenue ... sur votre espace privé.</h1>
           <p class="p-subtitle">Ici vous trouverez :
@@ -16,21 +16,19 @@
           </p>
         </div>
         <div class="container-clip-path">
-          <a [routerLink]="ctrl.route.mandatUndersigned" 
-          matTooltip="Accès privé à la plateforme 1GER pour la gestion et le suivi de vos dossiers. La plateforme vous permet de lancer la commercialisation dun bien immobilier très facilement." 
-          matTooltipPosition="right">
+          <a [routerLink]="ctrl.route.mandatUndersigned"
+            matTooltip="Accès privé à la plateforme 1GER pour la gestion et le suivi de vos dossiers. La plateforme vous permet de lancer la commercialisation dun bien immobilier très facilement."
+            matTooltipPosition="right">
             <div class="container-navigate-mandats">
               <h3 class="h3">Plateforme de gestion des mandats</h3>
               <span>Ouverture <br> septembre 2021</span>
             </div>
           </a>
-         
-          <a class="container-navigate bg-doc mx24px"
-            (click)="ctrl.scrollElement(documentation)">
+
+          <a class="container-navigate bg-doc mx24px" (click)="ctrl.scrollElement(documentation)">
             <h3 class="h3">Documentation</h3>
-          </a >
-          <a class="container-navigate bg-fiche-conseil"
-            (click)="ctrl.scrollElement(advice)">
+          </a>
+          <a class="container-navigate bg-fiche-conseil" (click)="ctrl.scrollElement(advice)">
             <h3 class="h3"> Fiches Conseils</h3>
           </a>
         </div>
@@ -39,18 +37,24 @@
   </section>
 
   <div class="mt-4">
-    <div class="container-base">
+    <div class="container-space">
       <section #documentation>
         <div class="row">
-          <div class="col-md-4">
-            Documentation
-            <hr>
-            <ul>
-              <li (click)="toogleView('d01')">D01 - Mandat</li>
-              <li (click)="toogleView('d02')">D02 - Déclaration d’activité</li>
-              <li (click)="toogleView('d03')">D03 - Loi ALUR</li>
-              <li (click)="toogleView('d04')">D04 - Guide pratique</li>
-            </ul>
+          <div class="col-md-4 scale-bg position-relative">
+            <img class="img-bg" src="../../../assets/images/1274-immo-fond.jpg" alt="">
+            <div class="form-card-clip position-absolute">
+
+              <h2 class="h2 title-doc">
+                Documentation
+              </h2>
+              <hr>
+              <ul>
+                <li (click)="toogleView('d01')">D01 - Mandat</li>
+                <li (click)="toogleView('d02')">D02 - Déclaration d’activité</li>
+                <li (click)="toogleView('d03')">D03 - Loi ALUR</li>
+                <li (click)="toogleView('d04')">D04 - Guide pratique</li>
+              </ul>
+            </div>
           </div>
           <div class="col-md-8">
             <app-private-documentation [d01]="d01" [d02]="d02" [d03]="d03" [d04]="d04"></app-private-documentation>
@@ -59,17 +63,23 @@
       </section>
       <section #advice>
         <div class="row">
-          <div class="col-md-4">
-            Fiches Conseils
-            <hr>
-            <ul>
-              <li (click)="toogleView('c01')">C01 - Comment convaincre ?</li>
-              <li (click)="toogleView('c02')">C02 - Comment détecter ?</li>
-              <li (click)="toogleView('c03')">C03 - Les points forts de LISA</li>
-              <li (click)="toogleView('c04')">C04 - Pourquoi développer mon activité ?</li>
-              <li (click)="toogleView('c05')">C05 - Les étapes d'une vente</li>
-              <li (click)="toogleView('c06')">C06 - Les diagnostics immobiliers</li>
-            </ul>
+          <div class="col-md-4 scale-bg position-relative">
+            <img class="img-bg" src="../../../assets/images/1274-plateforme.jpg" alt="">
+            <div class="form-card-clip position-absolute">
+              <h2 class="h2 title-conseil">
+                Fiches Conseils
+              </h2>
+
+              <hr>
+              <ul>
+                <li (click)="toogleView('c01')">C01 - Comment convaincre ?</li>
+                <li (click)="toogleView('c02')">C02 - Comment détecter ?</li>
+                <li (click)="toogleView('c03')">C03 - Les points forts de LISA</li>
+                <li (click)="toogleView('c04')">C04 - Pourquoi développer mon activité ?</li>
+                <li (click)="toogleView('c05')">C05 - Les étapes d'une vente</li>
+                <li (click)="toogleView('c06')">C06 - Les diagnostics immobiliers</li>
+              </ul>
+            </div>
           </div>
           <div class="col-md-8">
             <app-private-advice [c01]="c01" [c02]="c02" [c03]="c03" [c04]="c04" [c05]="c05" [c06]="c06">

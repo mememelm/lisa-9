@@ -1,1 +1,30 @@
-<p>lawyer-information works!</p>
+<div *ngIf="display" [formGroup]="parentFormGroup">
+  <p><b>Maitre.</b></p>
+  <p>
+    Nom :
+    <mat-form-field>
+      <input matInput type="text" formControlName="avi_last_name">
+    </mat-form-field>
+    Prénom :
+    <mat-form-field>
+      <input matInput type="text" formControlName="avi_first_name">
+    </mat-form-field>
+  </p>
+  <p>
+    Avocat au Barreau de :
+    <mat-form-field>
+      <input matInput type="text" formControlName="avi_lawyer_office">
+    </mat-form-field>
+    N° de toque :
+    <mat-form-field>
+      <input matInput type="text" formControlName="avi_toque">
+    </mat-form-field>
+  </p>
+
+  <app-address-input [parentFormGroup]="parentFormGroup" address="avi_address" city="avi_city"
+    postalCode="avi_postal_code" country="avi_country"></app-address-input>
+
+  <app-contact-input [parentFormGroup]="parentFormGroup" personnalPhone="avi_personnal_phone" homePhone="avi_home_phone"
+    email="avi_email">
+  </app-contact-input>
+</div>
