@@ -67,4 +67,15 @@ export interface MandateUndersigned {
   additional_amount_ttc?: number
   additional_amount_ttc_text?: string
   additional_hour_type?: string
+  mandate_location?: string
+  created_on?: Date
+  lawyer_seat?: string
+  retract_target?: string
+  retract_suscribe?: string
+  retract_date?: Date
+  retract_file_number?: string
+  retract_location?: string
+  retract_created_on?: string
+  retract_consumers?: string
+  retract_consumers_address?: string
 }

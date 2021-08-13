@@ -60,6 +60,9 @@ import { BuildingFinancialComponent } from './components/undersigned/building-fi
 import { TextMissionComponent } from './components/undersigned/text-mission/text-mission.component';
 import { RenumerationAssistanceComponent } from './components/undersigned/renumeration-assistance/renumeration-assistance.component';
 import { RenumerationTransactionComponent } from './components/undersigned/renumeration-transaction/renumeration-transaction.component';
+import { TextInterruptionComponent } from './components/undersigned/text-interruption/text-interruption.component';
+import { SignatureComponent } from './components/undersigned/signature/signature.component';
+import { RetractionComponent } from './components/undersigned/retraction/retraction.component';
 
 @NgModule({
   declarations: [
@@ -94,6 +97,9 @@ import { RenumerationTransactionComponent } from './components/undersigned/renum
     TextMissionComponent,
     RenumerationAssistanceComponent,
     RenumerationTransactionComponent,
+    TextInterruptionComponent,
+    SignatureComponent,
+    RetractionComponent,
   ],
   imports: [
     BrowserModule,

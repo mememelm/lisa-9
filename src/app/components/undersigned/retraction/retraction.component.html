@@ -1,0 +1,43 @@
+<form [formGroup]="parentFormGroup">
+  <p>FORMULAIRE DE RETRACTATION</p>
+  <p>(Preuve de l'envoi à la charge du consommateur - article L221-22 du Code de la consommation)</p>
+  <p>
+    A l'attention de :
+    <textarea class="mt-2 area" formControlName="retract_target"></textarea>
+  </p>
+  <p>
+    Je soussigné(e) / Nous soussignés (*)
+    <textarea class="mt-2 area" formControlName="retract_suscribe"></textarea>
+  </p>
+  <p>
+    Notifie / notifions (*) par la présente au Cabinet précité ma/notre rétractation de la CONVENTION DE MISSION
+    COMPORTANT MANDAT EXCLUSIF EN VUE DE LA VENTE DE BIENS IMMOBILIERS conclue le
+    <mat-form-field>
+      <input matInput type="text" formControlName="retract_date">
+    </mat-form-field>
+    et afférente au dossier n°
+    <mat-form-field>
+      <input matInput type="text" formControlName="retract_file_number">
+    </mat-form-field>
+  </p>
+  <p>
+    Fait à
+    <mat-form-field>
+      <input matInput type="text" formControlName="retract_location">
+    </mat-form-field>, le
+    <mat-form-field>
+      <input matInput type="text" formControlName="retract_created_on">
+    </mat-form-field>
+  </p>
+  <p>
+    Par : <br>
+    Nom du (des) consommateur(s) :
+    <textarea class="mt-2 area" formControlName="retract_consumers"></textarea>
+  </p>
+  <p>
+    Adresse du (des) consommateur(s) :
+    <mat-form-field>
+      <input matInput type="text" formControlName="retract_consumers_address">
+    </mat-form-field>
+  </p>
+</form>

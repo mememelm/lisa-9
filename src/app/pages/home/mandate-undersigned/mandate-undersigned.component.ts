@@ -100,7 +100,18 @@ export class MandateUndersignedComponent implements OnInit {
       additional_amount_ht_text: [''],
       additional_amount_ttc: [''],
       additional_amount_ttc_text: [''],
-      additional_hour_type: ['']
+      additional_hour_type: [''],
+      mandate_location: [''],
+      created_on: [''],
+      lawyer_seat:['1'],
+      retract_target: [''],
+      retract_suscribe: [''],
+      retract_date: [''],
+      retract_file_number: [''],
+      retract_location: [''],
+      retract_created_on: [''],
+      retract_consumers: [''],
+      retract_consumers_address: ['']
     })
 
     this.mandateForm.valueChanges.subscribe(() => {

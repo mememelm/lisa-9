@@ -82,5 +82,11 @@
     <app-renumeration-transaction [parentFormGroup]="mandateForm"
       [proportional]="additional_hour_type.value == 'proportional'" [lumpsum]="additional_hour_type.value == 'lumpsum'">
     </app-renumeration-transaction>
+
+    <app-text-interruption></app-text-interruption>
+
+    <app-signature [parentFormGroup]="mandateForm"></app-signature>
+
+    <app-retraction [parentFormGroup]="mandateForm"></app-retraction>
   </form>
 </div>
