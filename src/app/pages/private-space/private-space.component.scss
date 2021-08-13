@@ -164,7 +164,7 @@ main {
       overflow: hidden;
     }
     .form-card-clip {
-      width: 100%;
+      width: 90%;
       top: 10%;
       margin: auto;
       padding: 1%;
@@ -177,6 +177,12 @@ main {
       right: 0;
       top: 0;
       bottom: 0;
+      @media screen and (max-width: 1200px) {
+        height: 240px;
+      }
+      @media screen and (max-width: 1024px) {
+        height: 95%;
+      }
       h2.h2 {
         font-size: large;
         margin-bottom: 0;
