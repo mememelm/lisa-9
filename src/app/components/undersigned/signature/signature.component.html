@@ -1,0 +1,19 @@
+<form [formGroup]="parentFormGroup">
+  <p>
+    Fait à :
+    <mat-form-field>
+      <input matInput type="text" formControlName="mandate_location">
+    </mat-form-field>
+    le :
+    <mat-form-field>
+      <input matInput type="date" formControlName="created_on">
+    </mat-form-field>
+  </p>
+  <p>
+    Au siège de l'AVOCAT MANDATAIRE :
+    <mat-radio-group formControlName="lawyer_seat">
+      <mat-radio-button value="1">oui</mat-radio-button>
+      <mat-radio-button value="0">non</mat-radio-button>
+    </mat-radio-group>
+  </p>
+</form>

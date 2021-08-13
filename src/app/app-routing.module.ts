@@ -1,4 +1,4 @@
-import { MandateUndersignedComponent } from './pages/mandate-undersigned/mandate-undersigned.component';
+import { MandateUndersignedComponent } from './pages/home/mandate-undersigned/mandate-undersigned.component';
 import { UserListComponent } from './pages/admin/user-list/user-list.component';
 import { PrivateSpaceComponent } from './pages/private-space/private-space.component';
 import { UserRoleComponent } from './pages/admin/user-role/user-role.component';

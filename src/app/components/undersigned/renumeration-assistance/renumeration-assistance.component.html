@@ -1,0 +1,28 @@
+<form [formGroup]="parentFormGroup">
+  <p>12.1. <u>FIXATION DE LA RENUMERATION</u> :</p>
+  <p><b>12.1.1. <u>Honoraires fixes au titre de la mission d'assistance et de conseil</u></b> :</p>
+  <p>
+    Au titre des diligences qu'il efectuera au titre de sa mission d'assistance et de conseil telle que definie
+    ci-dessus, l' <b>AVOCAT MANDATAIRE</b> aura droit à une rénumeration telle que définie ci-dessous : <br>
+    - honoraire fixe de
+    <mat-form-field>
+      <input matInput type="number" formControlName="honorary_ht">
+    </mat-form-field> € HT (
+    <mat-form-field>
+      <input matInput type="text" formControlName="honorary_ht_text">
+    </mat-form-field> euros hors taxes) <br>
+    soit
+    <mat-form-field>
+      <input matInput type="number" formControlName="honorary_ttc">
+    </mat-form-field> € TTC (
+    <mat-form-field>
+      <input matInput type="text" formControlName="honorary_ttc_text">
+    </mat-form-field> euros toutes taxes) <br>
+    payable selon les modalités suivantes :
+    <textarea class="mt-2 area" formControlName="honorary_modality"></textarea>
+  </p>
+  <p>
+    Cet honoraire sera dû sur la présentation des factures correspondantes en fonction de l'avancée des diligencessur
+    présentation de la facture correspondante par l' <b>AVOCAT MANDATAIRE</b> au <b>MANDAT.</b>
+  </p>
+</form>

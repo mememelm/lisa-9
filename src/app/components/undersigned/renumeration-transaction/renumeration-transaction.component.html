@@ -1,0 +1,47 @@
+<form [formGroup]="parentFormGroup">
+  <p><b>12.1.2. <u>Honoraires au titre de la transaction</u></b> :</p>
+  <p>
+    En cas de réalisation de l'opération objet du <b>MANDAT</b> par la conclusion des actes correspondant, l' <b>AVOCAT
+      MANDATAIRE</b> aura droit à des horaires complémentaires correspondant à :
+  </p>
+  <mat-radio-group formControlName="additional_hour_type">
+    <mat-radio-button value="proportional">Honoraire proportionnel</mat-radio-button>
+    <mat-radio-button value="lumpsum">Honoraire forfaitaire</mat-radio-button>
+  </mat-radio-group>
+  <p *ngIf="proportional">
+    de :
+    <mat-form-field>
+      <input matInput type="number" formControlName="additional_percent_ht">
+    </mat-form-field> % HT (
+    <mat-form-field>
+      <input matInput type="text" formControlName="additional_percent_ht_text">
+    </mat-form-field> pourcent hors taxes comprises) <br>
+    soit :
+    <mat-form-field>
+      <input matInput type="number" formControlName="additional_percent_ttc">
+    </mat-form-field> % TTC (
+    <mat-form-field>
+      <input matInput type="text" formControlName="additional_percent_ttc_text">
+    </mat-form-field> pourcent toutes taxes comprises) du prix net vendeur
+  </p>
+  <p *ngIf="lumpsum">
+    de :
+    <mat-form-field>
+      <input matInput type="number" formControlName="additional_amount_ht">
+    </mat-form-field> € HT (
+    <mat-form-field>
+      <input matInput type="text" formControlName="additional_amount_ht_text">
+    </mat-form-field> euros hors taxes) <br>
+    soit :
+    <mat-form-field>
+      <input matInput type="number" formControlName="additional_amount_ttc">
+    </mat-form-field> € TTC (
+    <mat-form-field>
+      <input matInput type="text" formControlName="additional_amount_ttc_text">
+    </mat-form-field> euros toutes taxes comprises)
+  </p>
+  <p>
+    Les honoraires complémentaires de transaction seront payables comptant le jour de la signature des actes
+    authentiques à l'avocat mandataire.
+  </p>
+</form>

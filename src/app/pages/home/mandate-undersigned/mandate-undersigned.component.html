@@ -53,5 +53,40 @@
       à l'Ordre des avocats en qualité de mandataire en transactions immobilières en applicaiton de l'article 6-45 du
       RIN.
     </p>
+
+    <p>ci après désgnées également l' "<b>AVOCAT MANDATAIRE</b>", d'autre part,</p>
+
+    <p><b><u>IL EST CONTENU ET ARRETE CE QUI SUIT</u> :</b></p>
+
+    <p><b><u>ARTICLE 1 - OBJET DU MANDAT</u></b></p>
+
+    <p>
+      Par la présente, le <b>MANDANT</b> confie à l' <b>AVOCAT MANDATAIRE</b> qui accepte la mission: <br>
+      - de l'assister et le conseiller pour la réalisation du projet de cession de : <br>
+      <textarea class="mt-2 area" formArrayName="object_cession"></textarea>
+      de le representer avec un mandat exlcusif en vue de la prise de tout contact en son nom et pour son compte en vue
+      de la cession de biens immobiliers tel que décrits en ARTICLE 2 et aux fins de parvenir à la réalisation de
+      l'opération envisagée aux charges et conditions qui seront définies ci-après.
+    </p>
+
+    <p><b>ARTICLE 2 - <u>DESIGNATION ET CONDITIONS DE VENTE PROPOSEES </u> :</b></p>
+
+    <app-building-information [parentFormGroup]="mandateForm"></app-building-information>
+
+    <app-building-financial [parentFormGroup]="mandateForm" [displayInput]="displayCondition"></app-building-financial>
+
+    <app-text-mission></app-text-mission>
+
+    <app-renumeration-assistance [parentFormGroup]="mandateForm"></app-renumeration-assistance>
+
+    <app-renumeration-transaction [parentFormGroup]="mandateForm"
+      [proportional]="additional_hour_type.value == 'proportional'" [lumpsum]="additional_hour_type.value == 'lumpsum'">
+    </app-renumeration-transaction>
+
+    <app-text-interruption></app-text-interruption>
+
+    <app-signature [parentFormGroup]="mandateForm"></app-signature>
+
+    <app-retraction [parentFormGroup]="mandateForm"></app-retraction>
   </form>
 </div>
