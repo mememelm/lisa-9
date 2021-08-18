@@ -51,11 +51,15 @@ export class ConnexionComponent implements OnInit {
 
   getUserRole(roleId: number) {
     this.ctrl.api.get(Endpoints.ROLE_GET + roleId).subscribe((role: any) => {
-      localStorage.setItem('ROLE', JSON.stringify(role?.data))
-      if (role?.data['label'] == 'Administrateur général' || role?.data['abbreviation'] == 'ADG') {
-        this.ctrl.router.navigate([this.ctrl.route.adminUserRole])
+      if (!role.data.label) {
+        this.ctrl.alert.warn("Votre rôle n'est pas encore attribué. Na tsy haiko oe ina")
       } else {
-        this.ctrl.router.navigate([this.ctrl.route.privateSpace])
+        localStorage.setItem('ROLE', JSON.stringify(role?.data))
+        if (role?.data['label'] == 'Administrateur général' || role?.data['abbreviation'] == 'ADG') {
+          this.ctrl.router.navigate([this.ctrl.route.adminUserRole])
+        } else {
+          this.ctrl.router.navigate([this.ctrl.route.privateSpace])
+        }
       }
     })
   }
